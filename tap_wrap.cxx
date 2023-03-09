@@ -9,16 +9,6 @@
 // source: tap.i
 
 
-extern
-#ifdef __cplusplus
-  "C"
-#endif
-  void cgo_panic__tap_346fccac5823e4ff(const char*);
-static void _swig_gopanic(const char *p) {
-  cgo_panic__tap_346fccac5823e4ff(p);
-}
-
-
 
 #define SWIG_VERSION 0x040101
 #define SWIGGO
@@ -335,10 +325,10 @@ static void* Swig_malloc(int c) {
 }
 
 
-#include "include\TapAPICommDef.h"
-#include "include\TapAPIError.h"
-#include "include\TapQuoteAPI.h"
-#include "include\TapQuoteAPIDataType.h"
+#include "include/TapAPICommDef.h"
+#include "include/TapAPIError.h"
+#include "include/TapQuoteAPI.h"
+#include "include/TapQuoteAPIDataType.h"
 
 
 #include <string.h>
@@ -352,30 +342,30 @@ SwigDirector_ITapQuoteAPINotify::SwigDirector_ITapQuoteAPINotify(int swig_p)
       go_val(swig_p), swig_mem(0)
 { }
 
-extern "C" void Swig_DirectorITapQuoteAPINotify_callback_OnRspLogin_tap_346fccac5823e4ff(int, intgo errorCode, TapAPIQuotLoginRspInfo *info);
+extern "C" void Swig_DirectorITapQuoteAPINotify_callback_OnRspLogin_tap_d0ee4858b481f089(int, intgo errorCode, TapAPIQuotLoginRspInfo *info);
 void SwigDirector_ITapQuoteAPINotify::OnRspLogin(TAPIINT32 errorCode,TapAPIQuotLoginRspInfo const *info) {
   intgo swig_errorCode;
   TapAPIQuotLoginRspInfo *swig_info;
   
   swig_errorCode = (TAPIINT32)errorCode; 
   *(TapAPIQuotLoginRspInfo **)&swig_info = (TapAPIQuotLoginRspInfo *)info; 
-  Swig_DirectorITapQuoteAPINotify_callback_OnRspLogin_tap_346fccac5823e4ff(go_val, swig_errorCode, swig_info);
+  Swig_DirectorITapQuoteAPINotify_callback_OnRspLogin_tap_d0ee4858b481f089(go_val, swig_errorCode, swig_info);
 }
 
-extern "C" void Swig_DirectorITapQuoteAPINotify_callback_OnAPIReady_tap_346fccac5823e4ff(int);
+extern "C" void Swig_DirectorITapQuoteAPINotify_callback_OnAPIReady_tap_d0ee4858b481f089(int);
 void SwigDirector_ITapQuoteAPINotify::OnAPIReady() {
-  Swig_DirectorITapQuoteAPINotify_callback_OnAPIReady_tap_346fccac5823e4ff(go_val);
+  Swig_DirectorITapQuoteAPINotify_callback_OnAPIReady_tap_d0ee4858b481f089(go_val);
 }
 
-extern "C" void Swig_DirectorITapQuoteAPINotify_callback_OnDisconnect_tap_346fccac5823e4ff(int, intgo reasonCode);
+extern "C" void Swig_DirectorITapQuoteAPINotify_callback_OnDisconnect_tap_d0ee4858b481f089(int, intgo reasonCode);
 void SwigDirector_ITapQuoteAPINotify::OnDisconnect(TAPIINT32 reasonCode) {
   intgo swig_reasonCode;
   
   swig_reasonCode = (TAPIINT32)reasonCode; 
-  Swig_DirectorITapQuoteAPINotify_callback_OnDisconnect_tap_346fccac5823e4ff(go_val, swig_reasonCode);
+  Swig_DirectorITapQuoteAPINotify_callback_OnDisconnect_tap_d0ee4858b481f089(go_val, swig_reasonCode);
 }
 
-extern "C" void Swig_DirectorITapQuoteAPINotify_callback_OnRspQryCommodity_tap_346fccac5823e4ff(int, intgo sessionID, intgo errorCode, char isLast, TapAPIQuoteCommodityInfo *info);
+extern "C" void Swig_DirectorITapQuoteAPINotify_callback_OnRspQryCommodity_tap_d0ee4858b481f089(int, intgo sessionID, intgo errorCode, char isLast, TapAPIQuoteCommodityInfo *info);
 void SwigDirector_ITapQuoteAPINotify::OnRspQryCommodity(TAPIUINT32 sessionID,TAPIINT32 errorCode,TAPIYNFLAG isLast,TapAPIQuoteCommodityInfo const *info) {
   intgo swig_sessionID;
   intgo swig_errorCode;
@@ -386,10 +376,10 @@ void SwigDirector_ITapQuoteAPINotify::OnRspQryCommodity(TAPIUINT32 sessionID,TAP
   swig_errorCode = (TAPIINT32)errorCode; 
   swig_isLast = (TAPIYNFLAG)isLast; 
   *(TapAPIQuoteCommodityInfo **)&swig_info = (TapAPIQuoteCommodityInfo *)info; 
-  Swig_DirectorITapQuoteAPINotify_callback_OnRspQryCommodity_tap_346fccac5823e4ff(go_val, swig_sessionID, swig_errorCode, swig_isLast, swig_info);
+  Swig_DirectorITapQuoteAPINotify_callback_OnRspQryCommodity_tap_d0ee4858b481f089(go_val, swig_sessionID, swig_errorCode, swig_isLast, swig_info);
 }
 
-extern "C" void Swig_DirectorITapQuoteAPINotify_callback_OnRspQryContract_tap_346fccac5823e4ff(int, intgo sessionID, intgo errorCode, char isLast, TapAPIQuoteContractInfo *info);
+extern "C" void Swig_DirectorITapQuoteAPINotify_callback_OnRspQryContract_tap_d0ee4858b481f089(int, intgo sessionID, intgo errorCode, char isLast, TapAPIQuoteContractInfo *info);
 void SwigDirector_ITapQuoteAPINotify::OnRspQryContract(TAPIUINT32 sessionID,TAPIINT32 errorCode,TAPIYNFLAG isLast,TapAPIQuoteContractInfo const *info) {
   intgo swig_sessionID;
   intgo swig_errorCode;
@@ -400,10 +390,10 @@ void SwigDirector_ITapQuoteAPINotify::OnRspQryContract(TAPIUINT32 sessionID,TAPI
   swig_errorCode = (TAPIINT32)errorCode; 
   swig_isLast = (TAPIYNFLAG)isLast; 
   *(TapAPIQuoteContractInfo **)&swig_info = (TapAPIQuoteContractInfo *)info; 
-  Swig_DirectorITapQuoteAPINotify_callback_OnRspQryContract_tap_346fccac5823e4ff(go_val, swig_sessionID, swig_errorCode, swig_isLast, swig_info);
+  Swig_DirectorITapQuoteAPINotify_callback_OnRspQryContract_tap_d0ee4858b481f089(go_val, swig_sessionID, swig_errorCode, swig_isLast, swig_info);
 }
 
-extern "C" void Swig_DirectorITapQuoteAPINotify_callback_OnRspSubscribeQuote_tap_346fccac5823e4ff(int, intgo sessionID, intgo errorCode, char isLast, TapAPIQuoteWhole *info);
+extern "C" void Swig_DirectorITapQuoteAPINotify_callback_OnRspSubscribeQuote_tap_d0ee4858b481f089(int, intgo sessionID, intgo errorCode, char isLast, TapAPIQuoteWhole *info);
 void SwigDirector_ITapQuoteAPINotify::OnRspSubscribeQuote(TAPIUINT32 sessionID,TAPIINT32 errorCode,TAPIYNFLAG isLast,TapAPIQuoteWhole const *info) {
   intgo swig_sessionID;
   intgo swig_errorCode;
@@ -414,10 +404,10 @@ void SwigDirector_ITapQuoteAPINotify::OnRspSubscribeQuote(TAPIUINT32 sessionID,T
   swig_errorCode = (TAPIINT32)errorCode; 
   swig_isLast = (TAPIYNFLAG)isLast; 
   *(TapAPIQuoteWhole **)&swig_info = (TapAPIQuoteWhole *)info; 
-  Swig_DirectorITapQuoteAPINotify_callback_OnRspSubscribeQuote_tap_346fccac5823e4ff(go_val, swig_sessionID, swig_errorCode, swig_isLast, swig_info);
+  Swig_DirectorITapQuoteAPINotify_callback_OnRspSubscribeQuote_tap_d0ee4858b481f089(go_val, swig_sessionID, swig_errorCode, swig_isLast, swig_info);
 }
 
-extern "C" void Swig_DirectorITapQuoteAPINotify_callback_OnRspUnSubscribeQuote_tap_346fccac5823e4ff(int, intgo sessionID, intgo errorCode, char isLast, TapAPIContract *info);
+extern "C" void Swig_DirectorITapQuoteAPINotify_callback_OnRspUnSubscribeQuote_tap_d0ee4858b481f089(int, intgo sessionID, intgo errorCode, char isLast, TapAPIContract *info);
 void SwigDirector_ITapQuoteAPINotify::OnRspUnSubscribeQuote(TAPIUINT32 sessionID,TAPIINT32 errorCode,TAPIYNFLAG isLast,TapAPIContract const *info) {
   intgo swig_sessionID;
   intgo swig_errorCode;
@@ -428,22 +418,22 @@ void SwigDirector_ITapQuoteAPINotify::OnRspUnSubscribeQuote(TAPIUINT32 sessionID
   swig_errorCode = (TAPIINT32)errorCode; 
   swig_isLast = (TAPIYNFLAG)isLast; 
   *(TapAPIContract **)&swig_info = (TapAPIContract *)info; 
-  Swig_DirectorITapQuoteAPINotify_callback_OnRspUnSubscribeQuote_tap_346fccac5823e4ff(go_val, swig_sessionID, swig_errorCode, swig_isLast, swig_info);
+  Swig_DirectorITapQuoteAPINotify_callback_OnRspUnSubscribeQuote_tap_d0ee4858b481f089(go_val, swig_sessionID, swig_errorCode, swig_isLast, swig_info);
 }
 
-extern "C" void Swig_DirectorITapQuoteAPINotify_callback_OnRtnQuote_tap_346fccac5823e4ff(int, TapAPIQuoteWhole *info);
+extern "C" void Swig_DirectorITapQuoteAPINotify_callback_OnRtnQuote_tap_d0ee4858b481f089(int, TapAPIQuoteWhole *info);
 void SwigDirector_ITapQuoteAPINotify::OnRtnQuote(TapAPIQuoteWhole const *info) {
   TapAPIQuoteWhole *swig_info;
   
   *(TapAPIQuoteWhole **)&swig_info = (TapAPIQuoteWhole *)info; 
-  Swig_DirectorITapQuoteAPINotify_callback_OnRtnQuote_tap_346fccac5823e4ff(go_val, swig_info);
+  Swig_DirectorITapQuoteAPINotify_callback_OnRtnQuote_tap_d0ee4858b481f089(go_val, swig_info);
 }
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-void _wrap_Swig_free_tap_346fccac5823e4ff(void *_swig_go_0) {
+void _wrap_Swig_free_tap_d0ee4858b481f089(void *_swig_go_0) {
   void *arg1 = (void *) 0 ;
   
   arg1 = *(void **)&_swig_go_0; 
@@ -453,7 +443,7 @@ void _wrap_Swig_free_tap_346fccac5823e4ff(void *_swig_go_0) {
 }
 
 
-void *_wrap_Swig_malloc_tap_346fccac5823e4ff(intgo _swig_go_0) {
+void *_wrap_Swig_malloc_tap_d0ee4858b481f089(intgo _swig_go_0) {
   int arg1 ;
   void *result = 0 ;
   void *_swig_go_result;
@@ -466,7 +456,7 @@ void *_wrap_Swig_malloc_tap_346fccac5823e4ff(intgo _swig_go_0) {
 }
 
 
-char _wrap_APIYNFLAG_YES_get_tap_346fccac5823e4ff() {
+char _wrap_APIYNFLAG_YES_get_tap_d0ee4858b481f089() {
   TAPIYNFLAG result;
   char _swig_go_result;
   
@@ -477,7 +467,7 @@ char _wrap_APIYNFLAG_YES_get_tap_346fccac5823e4ff() {
 }
 
 
-char _wrap_APIYNFLAG_NO_get_tap_346fccac5823e4ff() {
+char _wrap_APIYNFLAG_NO_get_tap_d0ee4858b481f089() {
   TAPIYNFLAG result;
   char _swig_go_result;
   
@@ -488,7 +478,7 @@ char _wrap_APIYNFLAG_NO_get_tap_346fccac5823e4ff() {
 }
 
 
-char _wrap_APILOGLEVEL_NONE_get_tap_346fccac5823e4ff() {
+char _wrap_APILOGLEVEL_NONE_get_tap_d0ee4858b481f089() {
   TAPILOGLEVEL result;
   char _swig_go_result;
   
@@ -499,7 +489,7 @@ char _wrap_APILOGLEVEL_NONE_get_tap_346fccac5823e4ff() {
 }
 
 
-char _wrap_APILOGLEVEL_ERROR_get_tap_346fccac5823e4ff() {
+char _wrap_APILOGLEVEL_ERROR_get_tap_d0ee4858b481f089() {
   TAPILOGLEVEL result;
   char _swig_go_result;
   
@@ -510,7 +500,7 @@ char _wrap_APILOGLEVEL_ERROR_get_tap_346fccac5823e4ff() {
 }
 
 
-char _wrap_APILOGLEVEL_WARNING_get_tap_346fccac5823e4ff() {
+char _wrap_APILOGLEVEL_WARNING_get_tap_d0ee4858b481f089() {
   TAPILOGLEVEL result;
   char _swig_go_result;
   
@@ -521,7 +511,7 @@ char _wrap_APILOGLEVEL_WARNING_get_tap_346fccac5823e4ff() {
 }
 
 
-char _wrap_APILOGLEVEL_DEBUG_get_tap_346fccac5823e4ff() {
+char _wrap_APILOGLEVEL_DEBUG_get_tap_d0ee4858b481f089() {
   TAPILOGLEVEL result;
   char _swig_go_result;
   
@@ -532,7 +522,7 @@ char _wrap_APILOGLEVEL_DEBUG_get_tap_346fccac5823e4ff() {
 }
 
 
-char _wrap_TAPI_COMMODITY_TYPE_NONE_get_tap_346fccac5823e4ff() {
+char _wrap_TAPI_COMMODITY_TYPE_NONE_get_tap_d0ee4858b481f089() {
   TAPICommodityType result;
   char _swig_go_result;
   
@@ -543,7 +533,7 @@ char _wrap_TAPI_COMMODITY_TYPE_NONE_get_tap_346fccac5823e4ff() {
 }
 
 
-char _wrap_TAPI_COMMODITY_TYPE_SPOT_get_tap_346fccac5823e4ff() {
+char _wrap_TAPI_COMMODITY_TYPE_SPOT_get_tap_d0ee4858b481f089() {
   TAPICommodityType result;
   char _swig_go_result;
   
@@ -554,7 +544,7 @@ char _wrap_TAPI_COMMODITY_TYPE_SPOT_get_tap_346fccac5823e4ff() {
 }
 
 
-char _wrap_TAPI_COMMODITY_TYPE_FUTURES_get_tap_346fccac5823e4ff() {
+char _wrap_TAPI_COMMODITY_TYPE_FUTURES_get_tap_d0ee4858b481f089() {
   TAPICommodityType result;
   char _swig_go_result;
   
@@ -565,7 +555,7 @@ char _wrap_TAPI_COMMODITY_TYPE_FUTURES_get_tap_346fccac5823e4ff() {
 }
 
 
-char _wrap_TAPI_COMMODITY_TYPE_OPTION_get_tap_346fccac5823e4ff() {
+char _wrap_TAPI_COMMODITY_TYPE_OPTION_get_tap_d0ee4858b481f089() {
   TAPICommodityType result;
   char _swig_go_result;
   
@@ -576,7 +566,7 @@ char _wrap_TAPI_COMMODITY_TYPE_OPTION_get_tap_346fccac5823e4ff() {
 }
 
 
-char _wrap_TAPI_COMMODITY_TYPE_SPREAD_MONTH_get_tap_346fccac5823e4ff() {
+char _wrap_TAPI_COMMODITY_TYPE_SPREAD_MONTH_get_tap_d0ee4858b481f089() {
   TAPICommodityType result;
   char _swig_go_result;
   
@@ -587,7 +577,7 @@ char _wrap_TAPI_COMMODITY_TYPE_SPREAD_MONTH_get_tap_346fccac5823e4ff() {
 }
 
 
-char _wrap_TAPI_COMMODITY_TYPE_SPREAD_COMMODITY_get_tap_346fccac5823e4ff() {
+char _wrap_TAPI_COMMODITY_TYPE_SPREAD_COMMODITY_get_tap_d0ee4858b481f089() {
   TAPICommodityType result;
   char _swig_go_result;
   
@@ -598,7 +588,7 @@ char _wrap_TAPI_COMMODITY_TYPE_SPREAD_COMMODITY_get_tap_346fccac5823e4ff() {
 }
 
 
-char _wrap_TAPI_COMMODITY_TYPE_BUL_get_tap_346fccac5823e4ff() {
+char _wrap_TAPI_COMMODITY_TYPE_BUL_get_tap_d0ee4858b481f089() {
   TAPICommodityType result;
   char _swig_go_result;
   
@@ -609,7 +599,7 @@ char _wrap_TAPI_COMMODITY_TYPE_BUL_get_tap_346fccac5823e4ff() {
 }
 
 
-char _wrap_TAPI_COMMODITY_TYPE_BER_get_tap_346fccac5823e4ff() {
+char _wrap_TAPI_COMMODITY_TYPE_BER_get_tap_d0ee4858b481f089() {
   TAPICommodityType result;
   char _swig_go_result;
   
@@ -620,7 +610,7 @@ char _wrap_TAPI_COMMODITY_TYPE_BER_get_tap_346fccac5823e4ff() {
 }
 
 
-char _wrap_TAPI_COMMODITY_TYPE_STD_get_tap_346fccac5823e4ff() {
+char _wrap_TAPI_COMMODITY_TYPE_STD_get_tap_d0ee4858b481f089() {
   TAPICommodityType result;
   char _swig_go_result;
   
@@ -631,7 +621,7 @@ char _wrap_TAPI_COMMODITY_TYPE_STD_get_tap_346fccac5823e4ff() {
 }
 
 
-char _wrap_TAPI_COMMODITY_TYPE_STG_get_tap_346fccac5823e4ff() {
+char _wrap_TAPI_COMMODITY_TYPE_STG_get_tap_d0ee4858b481f089() {
   TAPICommodityType result;
   char _swig_go_result;
   
@@ -642,7 +632,7 @@ char _wrap_TAPI_COMMODITY_TYPE_STG_get_tap_346fccac5823e4ff() {
 }
 
 
-char _wrap_TAPI_COMMODITY_TYPE_PRT_get_tap_346fccac5823e4ff() {
+char _wrap_TAPI_COMMODITY_TYPE_PRT_get_tap_d0ee4858b481f089() {
   TAPICommodityType result;
   char _swig_go_result;
   
@@ -653,7 +643,7 @@ char _wrap_TAPI_COMMODITY_TYPE_PRT_get_tap_346fccac5823e4ff() {
 }
 
 
-char _wrap_TAPI_COMMODITY_TYPE_BLT_get_tap_346fccac5823e4ff() {
+char _wrap_TAPI_COMMODITY_TYPE_BLT_get_tap_d0ee4858b481f089() {
   TAPICommodityType result;
   char _swig_go_result;
   
@@ -664,7 +654,7 @@ char _wrap_TAPI_COMMODITY_TYPE_BLT_get_tap_346fccac5823e4ff() {
 }
 
 
-char _wrap_TAPI_COMMODITY_TYPE_BRT_get_tap_346fccac5823e4ff() {
+char _wrap_TAPI_COMMODITY_TYPE_BRT_get_tap_d0ee4858b481f089() {
   TAPICommodityType result;
   char _swig_go_result;
   
@@ -675,7 +665,7 @@ char _wrap_TAPI_COMMODITY_TYPE_BRT_get_tap_346fccac5823e4ff() {
 }
 
 
-char _wrap_TAPI_COMMODITY_TYPE_DIRECTFOREX_get_tap_346fccac5823e4ff() {
+char _wrap_TAPI_COMMODITY_TYPE_DIRECTFOREX_get_tap_d0ee4858b481f089() {
   TAPICommodityType result;
   char _swig_go_result;
   
@@ -686,7 +676,7 @@ char _wrap_TAPI_COMMODITY_TYPE_DIRECTFOREX_get_tap_346fccac5823e4ff() {
 }
 
 
-char _wrap_TAPI_COMMODITY_TYPE_INDIRECTFOREX_get_tap_346fccac5823e4ff() {
+char _wrap_TAPI_COMMODITY_TYPE_INDIRECTFOREX_get_tap_d0ee4858b481f089() {
   TAPICommodityType result;
   char _swig_go_result;
   
@@ -697,7 +687,7 @@ char _wrap_TAPI_COMMODITY_TYPE_INDIRECTFOREX_get_tap_346fccac5823e4ff() {
 }
 
 
-char _wrap_TAPI_COMMODITY_TYPE_CROSSFOREX_get_tap_346fccac5823e4ff() {
+char _wrap_TAPI_COMMODITY_TYPE_CROSSFOREX_get_tap_d0ee4858b481f089() {
   TAPICommodityType result;
   char _swig_go_result;
   
@@ -708,7 +698,7 @@ char _wrap_TAPI_COMMODITY_TYPE_CROSSFOREX_get_tap_346fccac5823e4ff() {
 }
 
 
-char _wrap_TAPI_COMMODITY_TYPE_INDEX_get_tap_346fccac5823e4ff() {
+char _wrap_TAPI_COMMODITY_TYPE_INDEX_get_tap_d0ee4858b481f089() {
   TAPICommodityType result;
   char _swig_go_result;
   
@@ -719,7 +709,7 @@ char _wrap_TAPI_COMMODITY_TYPE_INDEX_get_tap_346fccac5823e4ff() {
 }
 
 
-char _wrap_TAPI_COMMODITY_TYPE_STOCK_get_tap_346fccac5823e4ff() {
+char _wrap_TAPI_COMMODITY_TYPE_STOCK_get_tap_d0ee4858b481f089() {
   TAPICommodityType result;
   char _swig_go_result;
   
@@ -730,7 +720,7 @@ char _wrap_TAPI_COMMODITY_TYPE_STOCK_get_tap_346fccac5823e4ff() {
 }
 
 
-char _wrap_TAPI_COMMODITY_TYPE_SPOT_TRADINGDEFER_get_tap_346fccac5823e4ff() {
+char _wrap_TAPI_COMMODITY_TYPE_SPOT_TRADINGDEFER_get_tap_d0ee4858b481f089() {
   TAPICommodityType result;
   char _swig_go_result;
   
@@ -741,7 +731,7 @@ char _wrap_TAPI_COMMODITY_TYPE_SPOT_TRADINGDEFER_get_tap_346fccac5823e4ff() {
 }
 
 
-char _wrap_TAPI_COMMODITY_TYPE_FUTURE_LOCK_get_tap_346fccac5823e4ff() {
+char _wrap_TAPI_COMMODITY_TYPE_FUTURE_LOCK_get_tap_d0ee4858b481f089() {
   TAPICommodityType result;
   char _swig_go_result;
   
@@ -752,7 +742,7 @@ char _wrap_TAPI_COMMODITY_TYPE_FUTURE_LOCK_get_tap_346fccac5823e4ff() {
 }
 
 
-char _wrap_TAPI_COMMODITY_TYPE_EFP_get_tap_346fccac5823e4ff() {
+char _wrap_TAPI_COMMODITY_TYPE_EFP_get_tap_d0ee4858b481f089() {
   TAPICommodityType result;
   char _swig_go_result;
   
@@ -763,7 +753,7 @@ char _wrap_TAPI_COMMODITY_TYPE_EFP_get_tap_346fccac5823e4ff() {
 }
 
 
-char _wrap_TAPI_COMMODITY_TYPE_TAS_get_tap_346fccac5823e4ff() {
+char _wrap_TAPI_COMMODITY_TYPE_TAS_get_tap_d0ee4858b481f089() {
   TAPICommodityType result;
   char _swig_go_result;
   
@@ -774,7 +764,7 @@ char _wrap_TAPI_COMMODITY_TYPE_TAS_get_tap_346fccac5823e4ff() {
 }
 
 
-char _wrap_TAPI_CALLPUT_FLAG_CALL_get_tap_346fccac5823e4ff() {
+char _wrap_TAPI_CALLPUT_FLAG_CALL_get_tap_d0ee4858b481f089() {
   TAPICallOrPutFlagType result;
   char _swig_go_result;
   
@@ -785,7 +775,7 @@ char _wrap_TAPI_CALLPUT_FLAG_CALL_get_tap_346fccac5823e4ff() {
 }
 
 
-char _wrap_TAPI_CALLPUT_FLAG_PUT_get_tap_346fccac5823e4ff() {
+char _wrap_TAPI_CALLPUT_FLAG_PUT_get_tap_d0ee4858b481f089() {
   TAPICallOrPutFlagType result;
   char _swig_go_result;
   
@@ -796,7 +786,7 @@ char _wrap_TAPI_CALLPUT_FLAG_PUT_get_tap_346fccac5823e4ff() {
 }
 
 
-char _wrap_TAPI_CALLPUT_FLAG_NONE_get_tap_346fccac5823e4ff() {
+char _wrap_TAPI_CALLPUT_FLAG_NONE_get_tap_d0ee4858b481f089() {
   TAPICallOrPutFlagType result;
   char _swig_go_result;
   
@@ -807,7 +797,7 @@ char _wrap_TAPI_CALLPUT_FLAG_NONE_get_tap_346fccac5823e4ff() {
 }
 
 
-char _wrap_TAPI_AUTHTYPE_DIRECT_get_tap_346fccac5823e4ff() {
+char _wrap_TAPI_AUTHTYPE_DIRECT_get_tap_d0ee4858b481f089() {
   TAPIAuthTypeType result;
   char _swig_go_result;
   
@@ -818,7 +808,7 @@ char _wrap_TAPI_AUTHTYPE_DIRECT_get_tap_346fccac5823e4ff() {
 }
 
 
-char _wrap_TAPI_AUTHTYPE_RELAY_get_tap_346fccac5823e4ff() {
+char _wrap_TAPI_AUTHTYPE_RELAY_get_tap_d0ee4858b481f089() {
   TAPIAuthTypeType result;
   char _swig_go_result;
   
@@ -829,7 +819,7 @@ char _wrap_TAPI_AUTHTYPE_RELAY_get_tap_346fccac5823e4ff() {
 }
 
 
-void _wrap_TapAPIApplicationInfo_AuthCode_set_tap_346fccac5823e4ff(TapAPIApplicationInfo *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPIApplicationInfo_AuthCode_set_tap_d0ee4858b481f089(TapAPIApplicationInfo *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPIApplicationInfo *arg1 = (TapAPIApplicationInfo *) 0 ;
   char *arg2 ;
   
@@ -853,7 +843,7 @@ void _wrap_TapAPIApplicationInfo_AuthCode_set_tap_346fccac5823e4ff(TapAPIApplica
 }
 
 
-_gostring_ _wrap_TapAPIApplicationInfo_AuthCode_get_tap_346fccac5823e4ff(TapAPIApplicationInfo *_swig_go_0) {
+_gostring_ _wrap_TapAPIApplicationInfo_AuthCode_get_tap_d0ee4858b481f089(TapAPIApplicationInfo *_swig_go_0) {
   TapAPIApplicationInfo *arg1 = (TapAPIApplicationInfo *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -866,7 +856,7 @@ _gostring_ _wrap_TapAPIApplicationInfo_AuthCode_get_tap_346fccac5823e4ff(TapAPIA
 }
 
 
-void _wrap_TapAPIApplicationInfo_KeyOperationLogPath_set_tap_346fccac5823e4ff(TapAPIApplicationInfo *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPIApplicationInfo_KeyOperationLogPath_set_tap_d0ee4858b481f089(TapAPIApplicationInfo *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPIApplicationInfo *arg1 = (TapAPIApplicationInfo *) 0 ;
   char *arg2 ;
   
@@ -890,7 +880,7 @@ void _wrap_TapAPIApplicationInfo_KeyOperationLogPath_set_tap_346fccac5823e4ff(Ta
 }
 
 
-_gostring_ _wrap_TapAPIApplicationInfo_KeyOperationLogPath_get_tap_346fccac5823e4ff(TapAPIApplicationInfo *_swig_go_0) {
+_gostring_ _wrap_TapAPIApplicationInfo_KeyOperationLogPath_get_tap_d0ee4858b481f089(TapAPIApplicationInfo *_swig_go_0) {
   TapAPIApplicationInfo *arg1 = (TapAPIApplicationInfo *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -903,7 +893,7 @@ _gostring_ _wrap_TapAPIApplicationInfo_KeyOperationLogPath_get_tap_346fccac5823e
 }
 
 
-TapAPIApplicationInfo *_wrap_new_TapAPIApplicationInfo_tap_346fccac5823e4ff() {
+TapAPIApplicationInfo *_wrap_new_TapAPIApplicationInfo_tap_d0ee4858b481f089() {
   TapAPIApplicationInfo *result = 0 ;
   TapAPIApplicationInfo *_swig_go_result;
   
@@ -914,7 +904,7 @@ TapAPIApplicationInfo *_wrap_new_TapAPIApplicationInfo_tap_346fccac5823e4ff() {
 }
 
 
-void _wrap_delete_TapAPIApplicationInfo_tap_346fccac5823e4ff(TapAPIApplicationInfo *_swig_go_0) {
+void _wrap_delete_TapAPIApplicationInfo_tap_d0ee4858b481f089(TapAPIApplicationInfo *_swig_go_0) {
   TapAPIApplicationInfo *arg1 = (TapAPIApplicationInfo *) 0 ;
   
   arg1 = *(TapAPIApplicationInfo **)&_swig_go_0; 
@@ -924,7 +914,7 @@ void _wrap_delete_TapAPIApplicationInfo_tap_346fccac5823e4ff(TapAPIApplicationIn
 }
 
 
-void _wrap_TapAPICommodity_ExchangeNo_set_tap_346fccac5823e4ff(TapAPICommodity *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPICommodity_ExchangeNo_set_tap_d0ee4858b481f089(TapAPICommodity *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPICommodity *arg1 = (TapAPICommodity *) 0 ;
   char *arg2 ;
   
@@ -948,7 +938,7 @@ void _wrap_TapAPICommodity_ExchangeNo_set_tap_346fccac5823e4ff(TapAPICommodity *
 }
 
 
-_gostring_ _wrap_TapAPICommodity_ExchangeNo_get_tap_346fccac5823e4ff(TapAPICommodity *_swig_go_0) {
+_gostring_ _wrap_TapAPICommodity_ExchangeNo_get_tap_d0ee4858b481f089(TapAPICommodity *_swig_go_0) {
   TapAPICommodity *arg1 = (TapAPICommodity *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -961,7 +951,7 @@ _gostring_ _wrap_TapAPICommodity_ExchangeNo_get_tap_346fccac5823e4ff(TapAPICommo
 }
 
 
-void _wrap_TapAPICommodity_CommodityType_set_tap_346fccac5823e4ff(TapAPICommodity *_swig_go_0, char _swig_go_1) {
+void _wrap_TapAPICommodity_CommodityType_set_tap_d0ee4858b481f089(TapAPICommodity *_swig_go_0, char _swig_go_1) {
   TapAPICommodity *arg1 = (TapAPICommodity *) 0 ;
   TAPICommodityType arg2 ;
   
@@ -973,7 +963,7 @@ void _wrap_TapAPICommodity_CommodityType_set_tap_346fccac5823e4ff(TapAPICommodit
 }
 
 
-char _wrap_TapAPICommodity_CommodityType_get_tap_346fccac5823e4ff(TapAPICommodity *_swig_go_0) {
+char _wrap_TapAPICommodity_CommodityType_get_tap_d0ee4858b481f089(TapAPICommodity *_swig_go_0) {
   TapAPICommodity *arg1 = (TapAPICommodity *) 0 ;
   TAPICommodityType result;
   char _swig_go_result;
@@ -986,7 +976,7 @@ char _wrap_TapAPICommodity_CommodityType_get_tap_346fccac5823e4ff(TapAPICommodit
 }
 
 
-void _wrap_TapAPICommodity_CommodityNo_set_tap_346fccac5823e4ff(TapAPICommodity *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPICommodity_CommodityNo_set_tap_d0ee4858b481f089(TapAPICommodity *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPICommodity *arg1 = (TapAPICommodity *) 0 ;
   char *arg2 ;
   
@@ -1010,7 +1000,7 @@ void _wrap_TapAPICommodity_CommodityNo_set_tap_346fccac5823e4ff(TapAPICommodity 
 }
 
 
-_gostring_ _wrap_TapAPICommodity_CommodityNo_get_tap_346fccac5823e4ff(TapAPICommodity *_swig_go_0) {
+_gostring_ _wrap_TapAPICommodity_CommodityNo_get_tap_d0ee4858b481f089(TapAPICommodity *_swig_go_0) {
   TapAPICommodity *arg1 = (TapAPICommodity *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -1023,7 +1013,7 @@ _gostring_ _wrap_TapAPICommodity_CommodityNo_get_tap_346fccac5823e4ff(TapAPIComm
 }
 
 
-TapAPICommodity *_wrap_new_TapAPICommodity_tap_346fccac5823e4ff() {
+TapAPICommodity *_wrap_new_TapAPICommodity_tap_d0ee4858b481f089() {
   TapAPICommodity *result = 0 ;
   TapAPICommodity *_swig_go_result;
   
@@ -1034,7 +1024,7 @@ TapAPICommodity *_wrap_new_TapAPICommodity_tap_346fccac5823e4ff() {
 }
 
 
-void _wrap_delete_TapAPICommodity_tap_346fccac5823e4ff(TapAPICommodity *_swig_go_0) {
+void _wrap_delete_TapAPICommodity_tap_d0ee4858b481f089(TapAPICommodity *_swig_go_0) {
   TapAPICommodity *arg1 = (TapAPICommodity *) 0 ;
   
   arg1 = *(TapAPICommodity **)&_swig_go_0; 
@@ -1044,7 +1034,7 @@ void _wrap_delete_TapAPICommodity_tap_346fccac5823e4ff(TapAPICommodity *_swig_go
 }
 
 
-void _wrap_TapAPIContract_Commodity_set_tap_346fccac5823e4ff(TapAPIContract *_swig_go_0, TapAPICommodity *_swig_go_1) {
+void _wrap_TapAPIContract_Commodity_set_tap_d0ee4858b481f089(TapAPIContract *_swig_go_0, TapAPICommodity *_swig_go_1) {
   TapAPIContract *arg1 = (TapAPIContract *) 0 ;
   TapAPICommodity *arg2 = (TapAPICommodity *) 0 ;
   
@@ -1056,7 +1046,7 @@ void _wrap_TapAPIContract_Commodity_set_tap_346fccac5823e4ff(TapAPIContract *_sw
 }
 
 
-TapAPICommodity *_wrap_TapAPIContract_Commodity_get_tap_346fccac5823e4ff(TapAPIContract *_swig_go_0) {
+TapAPICommodity *_wrap_TapAPIContract_Commodity_get_tap_d0ee4858b481f089(TapAPIContract *_swig_go_0) {
   TapAPIContract *arg1 = (TapAPIContract *) 0 ;
   TapAPICommodity *result = 0 ;
   TapAPICommodity *_swig_go_result;
@@ -1069,7 +1059,7 @@ TapAPICommodity *_wrap_TapAPIContract_Commodity_get_tap_346fccac5823e4ff(TapAPIC
 }
 
 
-void _wrap_TapAPIContract_ContractNo1_set_tap_346fccac5823e4ff(TapAPIContract *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPIContract_ContractNo1_set_tap_d0ee4858b481f089(TapAPIContract *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPIContract *arg1 = (TapAPIContract *) 0 ;
   char *arg2 ;
   
@@ -1093,7 +1083,7 @@ void _wrap_TapAPIContract_ContractNo1_set_tap_346fccac5823e4ff(TapAPIContract *_
 }
 
 
-_gostring_ _wrap_TapAPIContract_ContractNo1_get_tap_346fccac5823e4ff(TapAPIContract *_swig_go_0) {
+_gostring_ _wrap_TapAPIContract_ContractNo1_get_tap_d0ee4858b481f089(TapAPIContract *_swig_go_0) {
   TapAPIContract *arg1 = (TapAPIContract *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -1106,7 +1096,7 @@ _gostring_ _wrap_TapAPIContract_ContractNo1_get_tap_346fccac5823e4ff(TapAPIContr
 }
 
 
-void _wrap_TapAPIContract_StrikePrice1_set_tap_346fccac5823e4ff(TapAPIContract *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPIContract_StrikePrice1_set_tap_d0ee4858b481f089(TapAPIContract *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPIContract *arg1 = (TapAPIContract *) 0 ;
   char *arg2 ;
   
@@ -1130,7 +1120,7 @@ void _wrap_TapAPIContract_StrikePrice1_set_tap_346fccac5823e4ff(TapAPIContract *
 }
 
 
-_gostring_ _wrap_TapAPIContract_StrikePrice1_get_tap_346fccac5823e4ff(TapAPIContract *_swig_go_0) {
+_gostring_ _wrap_TapAPIContract_StrikePrice1_get_tap_d0ee4858b481f089(TapAPIContract *_swig_go_0) {
   TapAPIContract *arg1 = (TapAPIContract *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -1143,7 +1133,7 @@ _gostring_ _wrap_TapAPIContract_StrikePrice1_get_tap_346fccac5823e4ff(TapAPICont
 }
 
 
-void _wrap_TapAPIContract_CallOrPutFlag1_set_tap_346fccac5823e4ff(TapAPIContract *_swig_go_0, char _swig_go_1) {
+void _wrap_TapAPIContract_CallOrPutFlag1_set_tap_d0ee4858b481f089(TapAPIContract *_swig_go_0, char _swig_go_1) {
   TapAPIContract *arg1 = (TapAPIContract *) 0 ;
   TAPICallOrPutFlagType arg2 ;
   
@@ -1155,7 +1145,7 @@ void _wrap_TapAPIContract_CallOrPutFlag1_set_tap_346fccac5823e4ff(TapAPIContract
 }
 
 
-char _wrap_TapAPIContract_CallOrPutFlag1_get_tap_346fccac5823e4ff(TapAPIContract *_swig_go_0) {
+char _wrap_TapAPIContract_CallOrPutFlag1_get_tap_d0ee4858b481f089(TapAPIContract *_swig_go_0) {
   TapAPIContract *arg1 = (TapAPIContract *) 0 ;
   TAPICallOrPutFlagType result;
   char _swig_go_result;
@@ -1168,7 +1158,7 @@ char _wrap_TapAPIContract_CallOrPutFlag1_get_tap_346fccac5823e4ff(TapAPIContract
 }
 
 
-void _wrap_TapAPIContract_ContractNo2_set_tap_346fccac5823e4ff(TapAPIContract *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPIContract_ContractNo2_set_tap_d0ee4858b481f089(TapAPIContract *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPIContract *arg1 = (TapAPIContract *) 0 ;
   char *arg2 ;
   
@@ -1192,7 +1182,7 @@ void _wrap_TapAPIContract_ContractNo2_set_tap_346fccac5823e4ff(TapAPIContract *_
 }
 
 
-_gostring_ _wrap_TapAPIContract_ContractNo2_get_tap_346fccac5823e4ff(TapAPIContract *_swig_go_0) {
+_gostring_ _wrap_TapAPIContract_ContractNo2_get_tap_d0ee4858b481f089(TapAPIContract *_swig_go_0) {
   TapAPIContract *arg1 = (TapAPIContract *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -1205,7 +1195,7 @@ _gostring_ _wrap_TapAPIContract_ContractNo2_get_tap_346fccac5823e4ff(TapAPIContr
 }
 
 
-void _wrap_TapAPIContract_StrikePrice2_set_tap_346fccac5823e4ff(TapAPIContract *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPIContract_StrikePrice2_set_tap_d0ee4858b481f089(TapAPIContract *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPIContract *arg1 = (TapAPIContract *) 0 ;
   char *arg2 ;
   
@@ -1229,7 +1219,7 @@ void _wrap_TapAPIContract_StrikePrice2_set_tap_346fccac5823e4ff(TapAPIContract *
 }
 
 
-_gostring_ _wrap_TapAPIContract_StrikePrice2_get_tap_346fccac5823e4ff(TapAPIContract *_swig_go_0) {
+_gostring_ _wrap_TapAPIContract_StrikePrice2_get_tap_d0ee4858b481f089(TapAPIContract *_swig_go_0) {
   TapAPIContract *arg1 = (TapAPIContract *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -1242,7 +1232,7 @@ _gostring_ _wrap_TapAPIContract_StrikePrice2_get_tap_346fccac5823e4ff(TapAPICont
 }
 
 
-void _wrap_TapAPIContract_CallOrPutFlag2_set_tap_346fccac5823e4ff(TapAPIContract *_swig_go_0, char _swig_go_1) {
+void _wrap_TapAPIContract_CallOrPutFlag2_set_tap_d0ee4858b481f089(TapAPIContract *_swig_go_0, char _swig_go_1) {
   TapAPIContract *arg1 = (TapAPIContract *) 0 ;
   TAPICallOrPutFlagType arg2 ;
   
@@ -1254,7 +1244,7 @@ void _wrap_TapAPIContract_CallOrPutFlag2_set_tap_346fccac5823e4ff(TapAPIContract
 }
 
 
-char _wrap_TapAPIContract_CallOrPutFlag2_get_tap_346fccac5823e4ff(TapAPIContract *_swig_go_0) {
+char _wrap_TapAPIContract_CallOrPutFlag2_get_tap_d0ee4858b481f089(TapAPIContract *_swig_go_0) {
   TapAPIContract *arg1 = (TapAPIContract *) 0 ;
   TAPICallOrPutFlagType result;
   char _swig_go_result;
@@ -1267,7 +1257,7 @@ char _wrap_TapAPIContract_CallOrPutFlag2_get_tap_346fccac5823e4ff(TapAPIContract
 }
 
 
-TapAPIContract *_wrap_new_TapAPIContract_tap_346fccac5823e4ff() {
+TapAPIContract *_wrap_new_TapAPIContract_tap_d0ee4858b481f089() {
   TapAPIContract *result = 0 ;
   TapAPIContract *_swig_go_result;
   
@@ -1278,7 +1268,7 @@ TapAPIContract *_wrap_new_TapAPIContract_tap_346fccac5823e4ff() {
 }
 
 
-void _wrap_delete_TapAPIContract_tap_346fccac5823e4ff(TapAPIContract *_swig_go_0) {
+void _wrap_delete_TapAPIContract_tap_d0ee4858b481f089(TapAPIContract *_swig_go_0) {
   TapAPIContract *arg1 = (TapAPIContract *) 0 ;
   
   arg1 = *(TapAPIContract **)&_swig_go_0; 
@@ -1288,7 +1278,7 @@ void _wrap_delete_TapAPIContract_tap_346fccac5823e4ff(TapAPIContract *_swig_go_0
 }
 
 
-void _wrap_TapAPIExchangeInfo_ExchangeNo_set_tap_346fccac5823e4ff(TapAPIExchangeInfo *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPIExchangeInfo_ExchangeNo_set_tap_d0ee4858b481f089(TapAPIExchangeInfo *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPIExchangeInfo *arg1 = (TapAPIExchangeInfo *) 0 ;
   char *arg2 ;
   
@@ -1312,7 +1302,7 @@ void _wrap_TapAPIExchangeInfo_ExchangeNo_set_tap_346fccac5823e4ff(TapAPIExchange
 }
 
 
-_gostring_ _wrap_TapAPIExchangeInfo_ExchangeNo_get_tap_346fccac5823e4ff(TapAPIExchangeInfo *_swig_go_0) {
+_gostring_ _wrap_TapAPIExchangeInfo_ExchangeNo_get_tap_d0ee4858b481f089(TapAPIExchangeInfo *_swig_go_0) {
   TapAPIExchangeInfo *arg1 = (TapAPIExchangeInfo *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -1325,7 +1315,7 @@ _gostring_ _wrap_TapAPIExchangeInfo_ExchangeNo_get_tap_346fccac5823e4ff(TapAPIEx
 }
 
 
-void _wrap_TapAPIExchangeInfo_ExchangeName_set_tap_346fccac5823e4ff(TapAPIExchangeInfo *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPIExchangeInfo_ExchangeName_set_tap_d0ee4858b481f089(TapAPIExchangeInfo *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPIExchangeInfo *arg1 = (TapAPIExchangeInfo *) 0 ;
   char *arg2 ;
   
@@ -1349,7 +1339,7 @@ void _wrap_TapAPIExchangeInfo_ExchangeName_set_tap_346fccac5823e4ff(TapAPIExchan
 }
 
 
-_gostring_ _wrap_TapAPIExchangeInfo_ExchangeName_get_tap_346fccac5823e4ff(TapAPIExchangeInfo *_swig_go_0) {
+_gostring_ _wrap_TapAPIExchangeInfo_ExchangeName_get_tap_d0ee4858b481f089(TapAPIExchangeInfo *_swig_go_0) {
   TapAPIExchangeInfo *arg1 = (TapAPIExchangeInfo *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -1362,7 +1352,7 @@ _gostring_ _wrap_TapAPIExchangeInfo_ExchangeName_get_tap_346fccac5823e4ff(TapAPI
 }
 
 
-TapAPIExchangeInfo *_wrap_new_TapAPIExchangeInfo_tap_346fccac5823e4ff() {
+TapAPIExchangeInfo *_wrap_new_TapAPIExchangeInfo_tap_d0ee4858b481f089() {
   TapAPIExchangeInfo *result = 0 ;
   TapAPIExchangeInfo *_swig_go_result;
   
@@ -1373,7 +1363,7 @@ TapAPIExchangeInfo *_wrap_new_TapAPIExchangeInfo_tap_346fccac5823e4ff() {
 }
 
 
-void _wrap_delete_TapAPIExchangeInfo_tap_346fccac5823e4ff(TapAPIExchangeInfo *_swig_go_0) {
+void _wrap_delete_TapAPIExchangeInfo_tap_d0ee4858b481f089(TapAPIExchangeInfo *_swig_go_0) {
   TapAPIExchangeInfo *arg1 = (TapAPIExchangeInfo *) 0 ;
   
   arg1 = *(TapAPIExchangeInfo **)&_swig_go_0; 
@@ -1383,7 +1373,7 @@ void _wrap_delete_TapAPIExchangeInfo_tap_346fccac5823e4ff(TapAPIExchangeInfo *_s
 }
 
 
-void _wrap_TapAPIChangePasswordReq_OldPassword_set_tap_346fccac5823e4ff(TapAPIChangePasswordReq *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPIChangePasswordReq_OldPassword_set_tap_d0ee4858b481f089(TapAPIChangePasswordReq *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPIChangePasswordReq *arg1 = (TapAPIChangePasswordReq *) 0 ;
   char *arg2 ;
   
@@ -1407,7 +1397,7 @@ void _wrap_TapAPIChangePasswordReq_OldPassword_set_tap_346fccac5823e4ff(TapAPICh
 }
 
 
-_gostring_ _wrap_TapAPIChangePasswordReq_OldPassword_get_tap_346fccac5823e4ff(TapAPIChangePasswordReq *_swig_go_0) {
+_gostring_ _wrap_TapAPIChangePasswordReq_OldPassword_get_tap_d0ee4858b481f089(TapAPIChangePasswordReq *_swig_go_0) {
   TapAPIChangePasswordReq *arg1 = (TapAPIChangePasswordReq *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -1420,7 +1410,7 @@ _gostring_ _wrap_TapAPIChangePasswordReq_OldPassword_get_tap_346fccac5823e4ff(Ta
 }
 
 
-void _wrap_TapAPIChangePasswordReq_NewPassword_set_tap_346fccac5823e4ff(TapAPIChangePasswordReq *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPIChangePasswordReq_NewPassword_set_tap_d0ee4858b481f089(TapAPIChangePasswordReq *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPIChangePasswordReq *arg1 = (TapAPIChangePasswordReq *) 0 ;
   char *arg2 ;
   
@@ -1444,7 +1434,7 @@ void _wrap_TapAPIChangePasswordReq_NewPassword_set_tap_346fccac5823e4ff(TapAPICh
 }
 
 
-_gostring_ _wrap_TapAPIChangePasswordReq_NewPassword_get_tap_346fccac5823e4ff(TapAPIChangePasswordReq *_swig_go_0) {
+_gostring_ _wrap_TapAPIChangePasswordReq_NewPassword_get_tap_d0ee4858b481f089(TapAPIChangePasswordReq *_swig_go_0) {
   TapAPIChangePasswordReq *arg1 = (TapAPIChangePasswordReq *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -1457,7 +1447,7 @@ _gostring_ _wrap_TapAPIChangePasswordReq_NewPassword_get_tap_346fccac5823e4ff(Ta
 }
 
 
-TapAPIChangePasswordReq *_wrap_new_TapAPIChangePasswordReq_tap_346fccac5823e4ff() {
+TapAPIChangePasswordReq *_wrap_new_TapAPIChangePasswordReq_tap_d0ee4858b481f089() {
   TapAPIChangePasswordReq *result = 0 ;
   TapAPIChangePasswordReq *_swig_go_result;
   
@@ -1468,7 +1458,7 @@ TapAPIChangePasswordReq *_wrap_new_TapAPIChangePasswordReq_tap_346fccac5823e4ff(
 }
 
 
-void _wrap_delete_TapAPIChangePasswordReq_tap_346fccac5823e4ff(TapAPIChangePasswordReq *_swig_go_0) {
+void _wrap_delete_TapAPIChangePasswordReq_tap_d0ee4858b481f089(TapAPIChangePasswordReq *_swig_go_0) {
   TapAPIChangePasswordReq *arg1 = (TapAPIChangePasswordReq *) 0 ;
   
   arg1 = *(TapAPIChangePasswordReq **)&_swig_go_0; 
@@ -1478,7 +1468,7 @@ void _wrap_delete_TapAPIChangePasswordReq_tap_346fccac5823e4ff(TapAPIChangePassw
 }
 
 
-intgo _wrap_TAPIERROR_SUCCEED_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_SUCCEED_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1489,7 +1479,7 @@ intgo _wrap_TAPIERROR_SUCCEED_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ConnectFail_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ConnectFail_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1500,7 +1490,7 @@ intgo _wrap_TAPIERROR_ConnectFail_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_LinkAuthFail_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_LinkAuthFail_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1511,7 +1501,7 @@ intgo _wrap_TAPIERROR_LinkAuthFail_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_HostUnavailable_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_HostUnavailable_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1522,7 +1512,7 @@ intgo _wrap_TAPIERROR_HostUnavailable_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_SendDataError_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_SendDataError_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1533,7 +1523,7 @@ intgo _wrap_TAPIERROR_SendDataError_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_TestIDError_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_TestIDError_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1544,7 +1534,7 @@ intgo _wrap_TAPIERROR_TestIDError_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_NotReadyTestNetwork_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_NotReadyTestNetwork_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1555,7 +1545,7 @@ intgo _wrap_TAPIERROR_NotReadyTestNetwork_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_CurTestNotOver_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_CurTestNotOver_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1566,7 +1556,7 @@ intgo _wrap_TAPIERROR_CurTestNotOver_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_NOFrontAvailable_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_NOFrontAvailable_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1577,7 +1567,7 @@ intgo _wrap_TAPIERROR_NOFrontAvailable_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_DataPathAvaiable_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_DataPathAvaiable_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1588,7 +1578,7 @@ intgo _wrap_TAPIERROR_DataPathAvaiable_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_RepeatLogin_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_RepeatLogin_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1599,7 +1589,7 @@ intgo _wrap_TAPIERROR_RepeatLogin_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_InnerError_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_InnerError_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1610,7 +1600,7 @@ intgo _wrap_TAPIERROR_InnerError_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_LastReqNotFinish_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_LastReqNotFinish_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1621,7 +1611,7 @@ intgo _wrap_TAPIERROR_LastReqNotFinish_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_InputValueError_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_InputValueError_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1632,7 +1622,7 @@ intgo _wrap_TAPIERROR_InputValueError_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_AuthCode_Invalid_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_AuthCode_Invalid_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1643,7 +1633,7 @@ intgo _wrap_TAPIERROR_AuthCode_Invalid_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_AuthCode_Expired_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_AuthCode_Expired_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1654,7 +1644,7 @@ intgo _wrap_TAPIERROR_AuthCode_Expired_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_AuthCode_TypeNotMatch_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_AuthCode_TypeNotMatch_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1665,7 +1655,7 @@ intgo _wrap_TAPIERROR_AuthCode_TypeNotMatch_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_API_NotReady_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_API_NotReady_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1676,7 +1666,7 @@ intgo _wrap_TAPIERROR_API_NotReady_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_UDP_LISTEN_FAILED_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_UDP_LISTEN_FAILED_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1687,7 +1677,7 @@ intgo _wrap_TAPIERROR_UDP_LISTEN_FAILED_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_UDP_LISTENING_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_UDP_LISTENING_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1698,7 +1688,7 @@ intgo _wrap_TAPIERROR_UDP_LISTENING_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_NotImplemented_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_NotImplemented_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1709,7 +1699,7 @@ intgo _wrap_TAPIERROR_NotImplemented_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_CallOneTimeOnly_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_CallOneTimeOnly_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1720,7 +1710,7 @@ intgo _wrap_TAPIERROR_CallOneTimeOnly_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_Frequently_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_Frequently_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1731,7 +1721,7 @@ intgo _wrap_TAPIERROR_Frequently_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_DataCollect_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_DataCollect_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1742,7 +1732,7 @@ intgo _wrap_TAPIERROR_DataCollect_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_DataLoad_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_DataLoad_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1753,7 +1743,7 @@ intgo _wrap_TAPIERROR_DataLoad_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_NoRelay_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_NoRelay_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1764,7 +1754,7 @@ intgo _wrap_TAPIERROR_NoRelay_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_INPUTERROR_NULL_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_INPUTERROR_NULL_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1775,7 +1765,7 @@ intgo _wrap_TAPIERROR_INPUTERROR_NULL_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_INPUTERROR_TAPIYNFLAG_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_INPUTERROR_TAPIYNFLAG_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1786,7 +1776,7 @@ intgo _wrap_TAPIERROR_INPUTERROR_TAPIYNFLAG_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_INPUTERROR_TAPILOGLEVEL_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_INPUTERROR_TAPILOGLEVEL_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1797,7 +1787,7 @@ intgo _wrap_TAPIERROR_INPUTERROR_TAPILOGLEVEL_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_INPUTERROR_TAPICommodityType_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_INPUTERROR_TAPICommodityType_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1808,7 +1798,7 @@ intgo _wrap_TAPIERROR_INPUTERROR_TAPICommodityType_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_INPUTERROR_TAPICallOrPutFlagType_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_INPUTERROR_TAPICallOrPutFlagType_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1819,7 +1809,7 @@ intgo _wrap_TAPIERROR_INPUTERROR_TAPICallOrPutFlagType_get_tap_346fccac5823e4ff(
 }
 
 
-intgo _wrap_TAPIERROR_INPUTERROR_TAPIAccountType_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_INPUTERROR_TAPIAccountType_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1830,7 +1820,7 @@ intgo _wrap_TAPIERROR_INPUTERROR_TAPIAccountType_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_INPUTERROR_TAPIAccountState_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_INPUTERROR_TAPIAccountState_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1841,7 +1831,7 @@ intgo _wrap_TAPIERROR_INPUTERROR_TAPIAccountState_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_INPUTERROR_TAPIAccountFamilyType_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_INPUTERROR_TAPIAccountFamilyType_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1852,7 +1842,7 @@ intgo _wrap_TAPIERROR_INPUTERROR_TAPIAccountFamilyType_get_tap_346fccac5823e4ff(
 }
 
 
-intgo _wrap_TAPIERROR_INPUTERROR_TAPIOrderTypeType_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_INPUTERROR_TAPIOrderTypeType_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1863,7 +1853,7 @@ intgo _wrap_TAPIERROR_INPUTERROR_TAPIOrderTypeType_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_INPUTERROR_TAPIOrderSourceType_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_INPUTERROR_TAPIOrderSourceType_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1874,7 +1864,7 @@ intgo _wrap_TAPIERROR_INPUTERROR_TAPIOrderSourceType_get_tap_346fccac5823e4ff() 
 }
 
 
-intgo _wrap_TAPIERROR_INPUTERROR_TAPITimeInForceType_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_INPUTERROR_TAPITimeInForceType_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1885,7 +1875,7 @@ intgo _wrap_TAPIERROR_INPUTERROR_TAPITimeInForceType_get_tap_346fccac5823e4ff() 
 }
 
 
-intgo _wrap_TAPIERROR_INPUTERROR_TAPISideType_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_INPUTERROR_TAPISideType_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1896,7 +1886,7 @@ intgo _wrap_TAPIERROR_INPUTERROR_TAPISideType_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_INPUTERROR_TAPIPositionEffectType_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_INPUTERROR_TAPIPositionEffectType_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1907,7 +1897,7 @@ intgo _wrap_TAPIERROR_INPUTERROR_TAPIPositionEffectType_get_tap_346fccac5823e4ff
 }
 
 
-intgo _wrap_TAPIERROR_INPUTERROR_TAPIHedgeFlagType_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_INPUTERROR_TAPIHedgeFlagType_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1918,7 +1908,7 @@ intgo _wrap_TAPIERROR_INPUTERROR_TAPIHedgeFlagType_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_INPUTERROR_TAPIOrderStateType_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_INPUTERROR_TAPIOrderStateType_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1929,7 +1919,7 @@ intgo _wrap_TAPIERROR_INPUTERROR_TAPIOrderStateType_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_INPUTERROR_TAPICalculateModeType_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_INPUTERROR_TAPICalculateModeType_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1940,7 +1930,7 @@ intgo _wrap_TAPIERROR_INPUTERROR_TAPICalculateModeType_get_tap_346fccac5823e4ff(
 }
 
 
-intgo _wrap_TAPIERROR_INPUTERROR_TAPIMatchSourceType_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_INPUTERROR_TAPIMatchSourceType_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1951,7 +1941,7 @@ intgo _wrap_TAPIERROR_INPUTERROR_TAPIMatchSourceType_get_tap_346fccac5823e4ff() 
 }
 
 
-intgo _wrap_TAPIERROR_INPUTERROR_TAPIOpenCloseModeType_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_INPUTERROR_TAPIOpenCloseModeType_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1962,7 +1952,7 @@ intgo _wrap_TAPIERROR_INPUTERROR_TAPIOpenCloseModeType_get_tap_346fccac5823e4ff(
 }
 
 
-intgo _wrap_TAPIERROR_INPUTERROR_TAPIFutureAlgType_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_INPUTERROR_TAPIFutureAlgType_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1973,7 +1963,7 @@ intgo _wrap_TAPIERROR_INPUTERROR_TAPIFutureAlgType_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_INPUTERROR_TAPIOptionAlgType_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_INPUTERROR_TAPIOptionAlgType_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1984,7 +1974,7 @@ intgo _wrap_TAPIERROR_INPUTERROR_TAPIOptionAlgType_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_INPUTERROR_TAPIBankAccountLWFlagType_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_INPUTERROR_TAPIBankAccountLWFlagType_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -1995,7 +1985,7 @@ intgo _wrap_TAPIERROR_INPUTERROR_TAPIBankAccountLWFlagType_get_tap_346fccac5823e
 }
 
 
-intgo _wrap_TAPIERROR_INPUTERROR_TAPIMarginCalculateModeType_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_INPUTERROR_TAPIMarginCalculateModeType_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2006,7 +1996,7 @@ intgo _wrap_TAPIERROR_INPUTERROR_TAPIMarginCalculateModeType_get_tap_346fccac582
 }
 
 
-intgo _wrap_TAPIERROR_INPUTERROR_TAPIOptionMarginCalculateModeType_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_INPUTERROR_TAPIOptionMarginCalculateModeType_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2017,7 +2007,7 @@ intgo _wrap_TAPIERROR_INPUTERROR_TAPIOptionMarginCalculateModeType_get_tap_346fc
 }
 
 
-intgo _wrap_TAPIERROR_INPUTERROR_TAPICmbDirectType_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_INPUTERROR_TAPICmbDirectType_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2028,7 +2018,7 @@ intgo _wrap_TAPIERROR_INPUTERROR_TAPICmbDirectType_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_INPUTERROR_TAPIDeliveryModeType_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_INPUTERROR_TAPIDeliveryModeType_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2039,7 +2029,7 @@ intgo _wrap_TAPIERROR_INPUTERROR_TAPIDeliveryModeType_get_tap_346fccac5823e4ff()
 }
 
 
-intgo _wrap_TAPIERROR_INPUTERROR_TAPIContractTypeType_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_INPUTERROR_TAPIContractTypeType_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2050,7 +2040,7 @@ intgo _wrap_TAPIERROR_INPUTERROR_TAPIContractTypeType_get_tap_346fccac5823e4ff()
 }
 
 
-intgo _wrap_TAPIERROR_INPUTERROR_TAPITacticsTypeType_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_INPUTERROR_TAPITacticsTypeType_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2061,7 +2051,7 @@ intgo _wrap_TAPIERROR_INPUTERROR_TAPITacticsTypeType_get_tap_346fccac5823e4ff() 
 }
 
 
-intgo _wrap_TAPIERROR_INPUTERROR_TAPIORDERACT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_INPUTERROR_TAPIORDERACT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2072,7 +2062,7 @@ intgo _wrap_TAPIERROR_INPUTERROR_TAPIORDERACT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_INPUTERROR_TAPITriggerConditionType_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_INPUTERROR_TAPITriggerConditionType_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2083,7 +2073,7 @@ intgo _wrap_TAPIERROR_INPUTERROR_TAPITriggerConditionType_get_tap_346fccac5823e4
 }
 
 
-intgo _wrap_TAPIERROR_INPUTERROR_TAPITriggerPriceTypeType_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_INPUTERROR_TAPITriggerPriceTypeType_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2094,7 +2084,7 @@ intgo _wrap_TAPIERROR_INPUTERROR_TAPITriggerPriceTypeType_get_tap_346fccac5823e4
 }
 
 
-intgo _wrap_TAPIERROR_INPUTERROR_TAPITradingStateType_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_INPUTERROR_TAPITradingStateType_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2105,7 +2095,7 @@ intgo _wrap_TAPIERROR_INPUTERROR_TAPITradingStateType_get_tap_346fccac5823e4ff()
 }
 
 
-intgo _wrap_TAPIERROR_INPUTERROR_TAPIMarketLevelType_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_INPUTERROR_TAPIMarketLevelType_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2116,7 +2106,7 @@ intgo _wrap_TAPIERROR_INPUTERROR_TAPIMarketLevelType_get_tap_346fccac5823e4ff() 
 }
 
 
-intgo _wrap_TAPIERROR_INPUTERROR_TAPIOrderQryTypeType_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_INPUTERROR_TAPIOrderQryTypeType_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2127,7 +2117,7 @@ intgo _wrap_TAPIERROR_INPUTERROR_TAPIOrderQryTypeType_get_tap_346fccac5823e4ff()
 }
 
 
-intgo _wrap_TAPIERROR_DISCONNECT_CLOSE_INIT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_DISCONNECT_CLOSE_INIT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2138,7 +2128,7 @@ intgo _wrap_TAPIERROR_DISCONNECT_CLOSE_INIT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_DISCONNECT_CLOSE_PASS_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_DISCONNECT_CLOSE_PASS_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2149,7 +2139,7 @@ intgo _wrap_TAPIERROR_DISCONNECT_CLOSE_PASS_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_DISCONNECT_READ_ERROR_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_DISCONNECT_READ_ERROR_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2160,7 +2150,7 @@ intgo _wrap_TAPIERROR_DISCONNECT_READ_ERROR_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_DISCONNECT_WRITE_ERROR_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_DISCONNECT_WRITE_ERROR_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2171,7 +2161,7 @@ intgo _wrap_TAPIERROR_DISCONNECT_WRITE_ERROR_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_DISCONNECT_BUF_FULL_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_DISCONNECT_BUF_FULL_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2182,7 +2172,7 @@ intgo _wrap_TAPIERROR_DISCONNECT_BUF_FULL_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_DISCONNECT_IOCP_ERROR_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_DISCONNECT_IOCP_ERROR_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2193,7 +2183,7 @@ intgo _wrap_TAPIERROR_DISCONNECT_IOCP_ERROR_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_DISCONNECT_PARSE_ERROR_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_DISCONNECT_PARSE_ERROR_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2204,7 +2194,7 @@ intgo _wrap_TAPIERROR_DISCONNECT_PARSE_ERROR_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_DISCONNECT_CONNECT_TIMEOUT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_DISCONNECT_CONNECT_TIMEOUT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2215,7 +2205,7 @@ intgo _wrap_TAPIERROR_DISCONNECT_CONNECT_TIMEOUT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_DISCONNECT_INIT_ERROR_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_DISCONNECT_INIT_ERROR_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2226,7 +2216,7 @@ intgo _wrap_TAPIERROR_DISCONNECT_INIT_ERROR_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_DISCONNECT_HAS_CONNECTED_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_DISCONNECT_HAS_CONNECTED_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2237,7 +2227,7 @@ intgo _wrap_TAPIERROR_DISCONNECT_HAS_CONNECTED_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_DISCONNECT_HAS_EXIT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_DISCONNECT_HAS_EXIT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2248,7 +2238,7 @@ intgo _wrap_TAPIERROR_DISCONNECT_HAS_EXIT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_DISCONNECT_TRY_LATER_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_DISCONNECT_TRY_LATER_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2259,7 +2249,7 @@ intgo _wrap_TAPIERROR_DISCONNECT_TRY_LATER_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_DISCONNECT_HEARTBEAT_FAILED_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_DISCONNECT_HEARTBEAT_FAILED_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2270,7 +2260,7 @@ intgo _wrap_TAPIERROR_DISCONNECT_HEARTBEAT_FAILED_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_LOGIN_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_LOGIN_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2281,7 +2271,7 @@ intgo _wrap_TAPIERROR_LOGIN_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_LOGIN_USER_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_LOGIN_USER_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2292,7 +2282,7 @@ intgo _wrap_TAPIERROR_LOGIN_USER_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_LOGIN_DDA_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_LOGIN_DDA_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2303,7 +2293,7 @@ intgo _wrap_TAPIERROR_LOGIN_DDA_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_LOGIN_LICENSE_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_LOGIN_LICENSE_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2314,7 +2304,7 @@ intgo _wrap_TAPIERROR_LOGIN_LICENSE_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_LOGIN_MODULE_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_LOGIN_MODULE_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2325,7 +2315,7 @@ intgo _wrap_TAPIERROR_LOGIN_MODULE_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_LOGIN_FORCE_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_LOGIN_FORCE_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2336,7 +2326,7 @@ intgo _wrap_TAPIERROR_LOGIN_FORCE_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_LOGIN_STATE_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_LOGIN_STATE_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2347,7 +2337,7 @@ intgo _wrap_TAPIERROR_LOGIN_STATE_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_LOGIN_PASS_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_LOGIN_PASS_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2358,7 +2348,7 @@ intgo _wrap_TAPIERROR_LOGIN_PASS_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_LOGIN_RIGHT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_LOGIN_RIGHT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2369,7 +2359,7 @@ intgo _wrap_TAPIERROR_LOGIN_RIGHT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_LOGIN_COUNT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_LOGIN_COUNT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2380,7 +2370,7 @@ intgo _wrap_TAPIERROR_LOGIN_COUNT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_LOGIN_NOTIN_SERVERFLAGUSRES_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_LOGIN_NOTIN_SERVERFLAGUSRES_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2391,7 +2381,7 @@ intgo _wrap_TAPIERROR_LOGIN_NOTIN_SERVERFLAGUSRES_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_LOGIN_USER_EXPIRED_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_LOGIN_USER_EXPIRED_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2402,7 +2392,7 @@ intgo _wrap_TAPIERROR_LOGIN_USER_EXPIRED_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_LOGIN_NO_ACCOUNT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_LOGIN_NO_ACCOUNT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2413,7 +2403,7 @@ intgo _wrap_TAPIERROR_LOGIN_NO_ACCOUNT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_LOGIN_NO_JGT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_LOGIN_NO_JGT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2424,7 +2414,7 @@ intgo _wrap_TAPIERROR_LOGIN_NO_JGT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_LOGIN_ERROR_TIMES_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_LOGIN_ERROR_TIMES_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2435,7 +2425,7 @@ intgo _wrap_TAPIERROR_LOGIN_ERROR_TIMES_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_LOGIN_ERROR_AUTHTYPE_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_LOGIN_ERROR_AUTHTYPE_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2446,7 +2436,7 @@ intgo _wrap_TAPIERROR_LOGIN_ERROR_AUTHTYPE_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_LOGIN_ERROR_AUTHEXPIRED_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_LOGIN_ERROR_AUTHEXPIRED_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2457,7 +2447,7 @@ intgo _wrap_TAPIERROR_LOGIN_ERROR_AUTHEXPIRED_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_LOGIN_ERROR_PASSWDEXPIRED_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_LOGIN_ERROR_PASSWDEXPIRED_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2468,7 +2458,7 @@ intgo _wrap_TAPIERROR_LOGIN_ERROR_PASSWDEXPIRED_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_LOGIN_ERROR_USERTRUST_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_LOGIN_ERROR_USERTRUST_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2479,7 +2469,7 @@ intgo _wrap_TAPIERROR_LOGIN_ERROR_USERTRUST_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_LOGIN_ERROR_CLIENTVERSION_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_LOGIN_ERROR_CLIENTVERSION_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2490,7 +2480,7 @@ intgo _wrap_TAPIERROR_LOGIN_ERROR_CLIENTVERSION_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_LOGIN_ERROR_AUTHCODEINFO_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_LOGIN_ERROR_AUTHCODEINFO_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2501,7 +2491,7 @@ intgo _wrap_TAPIERROR_LOGIN_ERROR_AUTHCODEINFO_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_USERINFO_QRY_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_USERINFO_QRY_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2512,7 +2502,7 @@ intgo _wrap_TAPIERROR_USERINFO_QRY_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_USERALLRIGHT_QRY_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_USERALLRIGHT_QRY_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2523,7 +2513,7 @@ intgo _wrap_TAPIERROR_USERALLRIGHT_QRY_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_USERALLACCOUNT_QRY_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_USERALLACCOUNT_QRY_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2534,7 +2524,7 @@ intgo _wrap_TAPIERROR_USERALLACCOUNT_QRY_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_USERPASSWORD_MOD_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_USERPASSWORD_MOD_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2545,7 +2535,7 @@ intgo _wrap_TAPIERROR_USERPASSWORD_MOD_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_USERPASSWORD_MOD_SOURCE_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_USERPASSWORD_MOD_SOURCE_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2556,7 +2546,7 @@ intgo _wrap_TAPIERROR_USERPASSWORD_MOD_SOURCE_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_USERPASSWORD_MOD_SAME_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_USERPASSWORD_MOD_SAME_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2567,7 +2557,7 @@ intgo _wrap_TAPIERROR_USERPASSWORD_MOD_SAME_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_USERPASSWORD_MOD_COMPLEXITY_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_USERPASSWORD_MOD_COMPLEXITY_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2578,7 +2568,7 @@ intgo _wrap_TAPIERROR_USERPASSWORD_MOD_COMPLEXITY_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ACCOUNTINFO_QRY_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ACCOUNTINFO_QRY_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2589,7 +2579,7 @@ intgo _wrap_TAPIERROR_ACCOUNTINFO_QRY_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_TRADENO_QRY_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_TRADENO_QRY_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2600,7 +2590,7 @@ intgo _wrap_TAPIERROR_TRADENO_QRY_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_CONTRACTINFO_QRY_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_CONTRACTINFO_QRY_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2611,7 +2601,7 @@ intgo _wrap_TAPIERROR_CONTRACTINFO_QRY_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_SPECIALOPTIONFUTURE_QRY_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_SPECIALOPTIONFUTURE_QRY_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2622,7 +2612,7 @@ intgo _wrap_TAPIERROR_SPECIALOPTIONFUTURE_QRY_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_COMMODITYORDERTYPE_QRY_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_COMMODITYORDERTYPE_QRY_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2633,7 +2623,7 @@ intgo _wrap_TAPIERROR_COMMODITYORDERTYPE_QRY_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERTIMEINFORCE_QRY_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERTIMEINFORCE_QRY_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2644,7 +2634,7 @@ intgo _wrap_TAPIERROR_ORDERTIMEINFORCE_QRY_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_USER_ORDER_FREQUENCE_QRY_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_USER_ORDER_FREQUENCE_QRY_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2655,7 +2645,7 @@ intgo _wrap_TAPIERROR_USER_ORDER_FREQUENCE_QRY_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_USERSUBMITAUTHTYPE_ERROR_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_USERSUBMITAUTHTYPE_ERROR_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2666,7 +2656,7 @@ intgo _wrap_TAPIERROR_USERSUBMITAUTHTYPE_ERROR_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_USERSUBMITINFO_EMPTY_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_USERSUBMITINFO_EMPTY_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2677,7 +2667,7 @@ intgo _wrap_TAPIERROR_USERSUBMITINFO_EMPTY_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_USERAUTHKEYVERSION_ERROR_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_USERAUTHKEYVERSION_ERROR_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2688,7 +2678,7 @@ intgo _wrap_TAPIERROR_USERAUTHKEYVERSION_ERROR_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_USERSUBMITINFO_PARTY_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_USERSUBMITINFO_PARTY_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2699,7 +2689,7 @@ intgo _wrap_TAPIERROR_USERSUBMITINFO_PARTY_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_USERSUBMITINFO_TESTKEY_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_USERSUBMITINFO_TESTKEY_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2710,7 +2700,7 @@ intgo _wrap_TAPIERROR_USERSUBMITINFO_TESTKEY_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_USERSUBMITINFO_USERNO_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_USERSUBMITINFO_USERNO_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2721,7 +2711,7 @@ intgo _wrap_TAPIERROR_USERSUBMITINFO_USERNO_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERINSERT_ACCOUNT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERINSERT_ACCOUNT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2732,7 +2722,7 @@ intgo _wrap_TAPIERROR_ORDERINSERT_ACCOUNT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERINSERT_ACCOUNT_STATE_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERINSERT_ACCOUNT_STATE_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2743,7 +2733,7 @@ intgo _wrap_TAPIERROR_ORDERINSERT_ACCOUNT_STATE_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERINSERT_SIDE_TRADE_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERINSERT_SIDE_TRADE_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2754,7 +2744,7 @@ intgo _wrap_TAPIERROR_ORDERINSERT_SIDE_TRADE_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERINSERT_OPTIONS_TRADE_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERINSERT_OPTIONS_TRADE_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2765,7 +2755,7 @@ intgo _wrap_TAPIERROR_ORDERINSERT_OPTIONS_TRADE_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERINSERT_COMMODITY_TRADE_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERINSERT_COMMODITY_TRADE_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2776,7 +2766,7 @@ intgo _wrap_TAPIERROR_ORDERINSERT_COMMODITY_TRADE_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERINSERT_OPEN_RIGHT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERINSERT_OPEN_RIGHT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2787,7 +2777,7 @@ intgo _wrap_TAPIERROR_ORDERINSERT_OPEN_RIGHT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERINSERT_RISK_CHECK_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERINSERT_RISK_CHECK_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2798,7 +2788,7 @@ intgo _wrap_TAPIERROR_ORDERINSERT_RISK_CHECK_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERINSERT_CONTRACT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERINSERT_CONTRACT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2809,7 +2799,7 @@ intgo _wrap_TAPIERROR_ORDERINSERT_CONTRACT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERINSERT_TRADEROUTE_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERINSERT_TRADEROUTE_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2820,7 +2810,7 @@ intgo _wrap_TAPIERROR_ORDERINSERT_TRADEROUTE_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERINSERT_POSITIONMAX_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERINSERT_POSITIONMAX_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2831,7 +2821,7 @@ intgo _wrap_TAPIERROR_ORDERINSERT_POSITIONMAX_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDER_NOTRADE_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDER_NOTRADE_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2842,7 +2832,7 @@ intgo _wrap_TAPIERROR_ORDER_NOTRADE_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDER_CLOSE_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDER_CLOSE_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2853,7 +2843,7 @@ intgo _wrap_TAPIERROR_ORDER_CLOSE_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERINSERT_NOTENOUGHFUND_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERINSERT_NOTENOUGHFUND_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2864,7 +2854,7 @@ intgo _wrap_TAPIERROR_ORDERINSERT_NOTENOUGHFUND_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERINSERT_ORDERTYPE_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERINSERT_ORDERTYPE_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2875,7 +2865,7 @@ intgo _wrap_TAPIERROR_ORDERINSERT_ORDERTYPE_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERINSERT_TIMEINFORCE_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERINSERT_TIMEINFORCE_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2886,7 +2876,7 @@ intgo _wrap_TAPIERROR_ORDERINSERT_TIMEINFORCE_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERINSERT_NO_TACTICS_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERINSERT_NO_TACTICS_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2897,7 +2887,7 @@ intgo _wrap_TAPIERROR_ORDERINSERT_NO_TACTICS_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERINSERT_POSITION_CANNOT_CLOSE_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERINSERT_POSITION_CANNOT_CLOSE_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2908,7 +2898,7 @@ intgo _wrap_TAPIERROR_ORDERINSERT_POSITION_CANNOT_CLOSE_get_tap_346fccac5823e4ff
 }
 
 
-intgo _wrap_TAPIERROR_ORDERINSERT_AUTOCHECK_FAIL_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERINSERT_AUTOCHECK_FAIL_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2919,7 +2909,7 @@ intgo _wrap_TAPIERROR_ORDERINSERT_AUTOCHECK_FAIL_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERINSERT_LME_NOTREADY_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERINSERT_LME_NOTREADY_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2930,7 +2920,7 @@ intgo _wrap_TAPIERROR_ORDERINSERT_LME_NOTREADY_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERINSERT_CLOSEMODE_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERINSERT_CLOSEMODE_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2941,7 +2931,7 @@ intgo _wrap_TAPIERROR_ORDERINSERT_CLOSEMODE_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERINSERT_PARENTNOTENOUGHFUND_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERINSERT_PARENTNOTENOUGHFUND_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2952,7 +2942,7 @@ intgo _wrap_TAPIERROR_ORDERINSERT_PARENTNOTENOUGHFUND_get_tap_346fccac5823e4ff()
 }
 
 
-intgo _wrap_TAPIERROR_SWAP_CONTRACT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_SWAP_CONTRACT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2963,7 +2953,7 @@ intgo _wrap_TAPIERROR_SWAP_CONTRACT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERINSERT_PRICE_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERINSERT_PRICE_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2974,7 +2964,7 @@ intgo _wrap_TAPIERROR_ORDERINSERT_PRICE_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERINSERT_EFFECT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERINSERT_EFFECT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2985,7 +2975,7 @@ intgo _wrap_TAPIERROR_ORDERINSERT_EFFECT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERINSERT_TARGETCONTRACT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERINSERT_TARGETCONTRACT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -2996,7 +2986,7 @@ intgo _wrap_TAPIERROR_ORDERINSERT_TARGETCONTRACT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_USERNO_NOTHAS_ACCOUNT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_USERNO_NOTHAS_ACCOUNT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3007,7 +2997,7 @@ intgo _wrap_TAPIERROR_USERNO_NOTHAS_ACCOUNT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_UPPERCHANNEL_BROKEN_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_UPPERCHANNEL_BROKEN_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3018,7 +3008,7 @@ intgo _wrap_TAPIERROR_UPPERCHANNEL_BROKEN_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_UPPERCHANNEL_NOT_EXIST_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_UPPERCHANNEL_NOT_EXIST_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3029,7 +3019,7 @@ intgo _wrap_TAPIERROR_UPPERCHANNEL_NOT_EXIST_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERDELETE_NOT_SYSNO_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERDELETE_NOT_SYSNO_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3040,7 +3030,7 @@ intgo _wrap_TAPIERROR_ORDERDELETE_NOT_SYSNO_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERDELETE_NOT_STATE_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERDELETE_NOT_STATE_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3051,7 +3041,7 @@ intgo _wrap_TAPIERROR_ORDERDELETE_NOT_STATE_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERACTIVE_NOT_STATE_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERACTIVE_NOT_STATE_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3062,7 +3052,7 @@ intgo _wrap_TAPIERROR_ORDERACTIVE_NOT_STATE_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERDELETE_NOT_LAST_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERDELETE_NOT_LAST_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3073,7 +3063,7 @@ intgo _wrap_TAPIERROR_ORDERDELETE_NOT_LAST_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERCHECK_NOT_STATE_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERCHECK_NOT_STATE_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3084,7 +3074,7 @@ intgo _wrap_TAPIERROR_ORDERCHECK_NOT_STATE_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERCHECK_FAIL_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERCHECK_FAIL_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3095,7 +3085,7 @@ intgo _wrap_TAPIERROR_ORDERCHECK_FAIL_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERMODIFY_NOT_STATE_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERMODIFY_NOT_STATE_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3106,7 +3096,7 @@ intgo _wrap_TAPIERROR_ORDERMODIFY_NOT_STATE_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERMODIFY_BACK_INPUT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERMODIFY_BACK_INPUT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3117,7 +3107,7 @@ intgo _wrap_TAPIERROR_ORDERMODIFY_BACK_INPUT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERINSERT_FEE_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERINSERT_FEE_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3128,7 +3118,7 @@ intgo _wrap_TAPIERROR_ORDERINSERT_FEE_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERINSERT_MARGIN_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERINSERT_MARGIN_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3139,7 +3129,7 @@ intgo _wrap_TAPIERROR_ORDERINSERT_MARGIN_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDER_NO_PERMIT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDER_NO_PERMIT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3150,7 +3140,7 @@ intgo _wrap_TAPIERROR_ORDER_NO_PERMIT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_RSPQUOTE_NO_PERMIT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_RSPQUOTE_NO_PERMIT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3161,7 +3151,7 @@ intgo _wrap_TAPIERROR_RSPQUOTE_NO_PERMIT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_RSPQUOTE_CHILD_NO_PERMIT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_RSPQUOTE_CHILD_NO_PERMIT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3172,7 +3162,7 @@ intgo _wrap_TAPIERROR_RSPQUOTE_CHILD_NO_PERMIT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_TRADENO_NOT_FIND_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_TRADENO_NOT_FIND_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3183,7 +3173,7 @@ intgo _wrap_TAPIERROR_TRADENO_NOT_FIND_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDER_NO_CLOSE_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDER_NO_CLOSE_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3194,7 +3184,7 @@ intgo _wrap_TAPIERROR_ORDER_NO_CLOSE_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_QRY_QUOTE_NO_PERMIT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_QRY_QUOTE_NO_PERMIT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3205,7 +3195,7 @@ intgo _wrap_TAPIERROR_QRY_QUOTE_NO_PERMIT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_EXPIREDATE_NO_PERMIT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_EXPIREDATE_NO_PERMIT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3216,7 +3206,7 @@ intgo _wrap_TAPIERROR_EXPIREDATE_NO_PERMIT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_CMB_NO_PERMIT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_CMB_NO_PERMIT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3227,7 +3217,7 @@ intgo _wrap_TAPIERROR_CMB_NO_PERMIT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERSERVER_NO_PERMIT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERSERVER_NO_PERMIT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3238,7 +3228,7 @@ intgo _wrap_TAPIERROR_ORDERSERVER_NO_PERMIT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_POSITION_CANNOT_EXEC_OR_ABANDON_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_POSITION_CANNOT_EXEC_OR_ABANDON_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3249,7 +3239,7 @@ intgo _wrap_TAPIERROR_POSITION_CANNOT_EXEC_OR_ABANDON_get_tap_346fccac5823e4ff()
 }
 
 
-intgo _wrap_TAPIERROR_ORDERCHECK_NO_PERMIT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERCHECK_NO_PERMIT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3260,7 +3250,7 @@ intgo _wrap_TAPIERROR_ORDERCHECK_NO_PERMIT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERMAXOPENVOL_NO_PERMIT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERMAXOPENVOL_NO_PERMIT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3271,7 +3261,7 @@ intgo _wrap_TAPIERROR_ORDERMAXOPENVOL_NO_PERMIT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERLIMIT_OPEN_NO_PERMIT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERLIMIT_OPEN_NO_PERMIT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3282,7 +3272,7 @@ intgo _wrap_TAPIERROR_ORDERLIMIT_OPEN_NO_PERMIT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDER_SINGLEVOL_NO_PERMIT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDER_SINGLEVOL_NO_PERMIT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3293,7 +3283,7 @@ intgo _wrap_TAPIERROR_ORDER_SINGLEVOL_NO_PERMIT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDER_POSITIONVOL_NO_PERMIT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDER_POSITIONVOL_NO_PERMIT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3304,7 +3294,7 @@ intgo _wrap_TAPIERROR_ORDER_POSITIONVOL_NO_PERMIT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDER_QTY_NO_PERMIT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDER_QTY_NO_PERMIT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3315,7 +3305,7 @@ intgo _wrap_TAPIERROR_ORDER_QTY_NO_PERMIT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDER_APPLY_NO_PERMIT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDER_APPLY_NO_PERMIT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3326,7 +3316,7 @@ intgo _wrap_TAPIERROR_ORDER_APPLY_NO_PERMIT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDER_FREQ_OVERRUN_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDER_FREQ_OVERRUN_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3337,7 +3327,7 @@ intgo _wrap_TAPIERROR_ORDER_FREQ_OVERRUN_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_COMB_NO_SIDEORHEDGE_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_COMB_NO_SIDEORHEDGE_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3348,7 +3338,7 @@ intgo _wrap_TAPIERROR_COMB_NO_SIDEORHEDGE_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_REQQUOTE_EXITREASONABLPRICE_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_REQQUOTE_EXITREASONABLPRICE_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3359,7 +3349,7 @@ intgo _wrap_TAPIERROR_REQQUOTE_EXITREASONABLPRICE_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_RSPQUOTE_PRICE_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_RSPQUOTE_PRICE_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3370,7 +3360,7 @@ intgo _wrap_TAPIERROR_RSPQUOTE_PRICE_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_RISKORDER_CANCEL_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_RISKORDER_CANCEL_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3381,7 +3371,7 @@ intgo _wrap_TAPIERROR_RISKORDER_CANCEL_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_RSPQUOTE_EFFECT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_RSPQUOTE_EFFECT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3392,7 +3382,7 @@ intgo _wrap_TAPIERROR_RSPQUOTE_EFFECT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDERINSERT_SIDEMODE_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDERINSERT_SIDEMODE_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3403,7 +3393,7 @@ intgo _wrap_TAPIERROR_ORDERINSERT_SIDEMODE_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_AUTOORDER_MAXCOUNT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_AUTOORDER_MAXCOUNT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3414,7 +3404,7 @@ intgo _wrap_TAPIERROR_AUTOORDER_MAXCOUNT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_SHFEDEEPQUOTE_LIMIT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_SHFEDEEPQUOTE_LIMIT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3425,7 +3415,7 @@ intgo _wrap_TAPIERROR_SHFEDEEPQUOTE_LIMIT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_SHFEDEEPQUOTE_NODATA_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_SHFEDEEPQUOTE_NODATA_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3436,7 +3426,7 @@ intgo _wrap_TAPIERROR_SHFEDEEPQUOTE_NODATA_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_SELFMATCH_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_SELFMATCH_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3447,7 +3437,7 @@ intgo _wrap_TAPIERROR_SELFMATCH_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ERRORORDER_MAXCOUNT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ERRORORDER_MAXCOUNT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3458,7 +3448,7 @@ intgo _wrap_TAPIERROR_ERRORORDER_MAXCOUNT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDER_UPPERFREQ_OVERRUN_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDER_UPPERFREQ_OVERRUN_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3469,7 +3459,7 @@ intgo _wrap_TAPIERROR_ORDER_UPPERFREQ_OVERRUN_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDER_FREQUENCY_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDER_FREQUENCY_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3480,7 +3470,7 @@ intgo _wrap_TAPIERROR_ORDER_FREQUENCY_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDER_QUERYING_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDER_QUERYING_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3491,7 +3481,7 @@ intgo _wrap_TAPIERROR_ORDER_QUERYING_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_SUBSCRIBEQUOTE_MAX_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_SUBSCRIBEQUOTE_MAX_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3502,7 +3492,7 @@ intgo _wrap_TAPIERROR_SUBSCRIBEQUOTE_MAX_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_SUBSCRIBEQUOTE_EXCHANGE_MAX_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_SUBSCRIBEQUOTE_EXCHANGE_MAX_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3513,7 +3503,7 @@ intgo _wrap_TAPIERROR_SUBSCRIBEQUOTE_EXCHANGE_MAX_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_SUBSCRIBEQUOTE_NO_RIGHT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_SUBSCRIBEQUOTE_NO_RIGHT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3524,7 +3514,7 @@ intgo _wrap_TAPIERROR_SUBSCRIBEQUOTE_NO_RIGHT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_SUBSCRIBEQUOTE_NO_EXCHANGE_RIGHT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_SUBSCRIBEQUOTE_NO_EXCHANGE_RIGHT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3535,7 +3525,7 @@ intgo _wrap_TAPIERROR_SUBSCRIBEQUOTE_NO_EXCHANGE_RIGHT_get_tap_346fccac5823e4ff(
 }
 
 
-intgo _wrap_TAPIERROR_SUBSCRIBEQUOTE_COMMODITY_NOT_EXIST_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_SUBSCRIBEQUOTE_COMMODITY_NOT_EXIST_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3546,7 +3536,7 @@ intgo _wrap_TAPIERROR_SUBSCRIBEQUOTE_COMMODITY_NOT_EXIST_get_tap_346fccac5823e4f
 }
 
 
-intgo _wrap_TAPIERROR_SUBSCRIBEQUOTE_CONTRACT_MAY_NOT_EXIST_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_SUBSCRIBEQUOTE_CONTRACT_MAY_NOT_EXIST_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3557,7 +3547,7 @@ intgo _wrap_TAPIERROR_SUBSCRIBEQUOTE_CONTRACT_MAY_NOT_EXIST_get_tap_346fccac5823
 }
 
 
-intgo _wrap_TAPIERROR_QUOTEFRONT_UNKNOWN_PROTOCOL_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_QUOTEFRONT_UNKNOWN_PROTOCOL_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3568,7 +3558,7 @@ intgo _wrap_TAPIERROR_QUOTEFRONT_UNKNOWN_PROTOCOL_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_QUOTEFRONT_LOGIN_TOTALCOUNT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_QUOTEFRONT_LOGIN_TOTALCOUNT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3579,7 +3569,7 @@ intgo _wrap_TAPIERROR_QUOTEFRONT_LOGIN_TOTALCOUNT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_QUOTEFRONT_SUB_COUNT_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_QUOTEFRONT_SUB_COUNT_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3590,7 +3580,7 @@ intgo _wrap_TAPIERROR_QUOTEFRONT_SUB_COUNT_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDER_SEND_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDER_SEND_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3601,7 +3591,7 @@ intgo _wrap_TAPIERROR_ORDER_SEND_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_DLG_NULL_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_DLG_NULL_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3612,7 +3602,7 @@ intgo _wrap_TAPIERROR_DLG_NULL_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDER_FIELD_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDER_FIELD_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3623,7 +3613,7 @@ intgo _wrap_TAPIERROR_ORDER_FIELD_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_TRADE_REJ_BYUPPER_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_TRADE_REJ_BYUPPER_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3634,7 +3624,7 @@ intgo _wrap_TAPIERROR_TRADE_REJ_BYUPPER_get_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_TAPIERROR_ORDER_FORBIDEXEC_get_tap_346fccac5823e4ff() {
+intgo _wrap_TAPIERROR_ORDER_FORBIDEXEC_get_tap_d0ee4858b481f089() {
   int result;
   intgo _swig_go_result;
   
@@ -3645,7 +3635,7 @@ intgo _wrap_TAPIERROR_ORDER_FORBIDEXEC_get_tap_346fccac5823e4ff() {
 }
 
 
-ITapQuoteAPINotify *_wrap__swig_NewDirectorITapQuoteAPINotifyITapQuoteAPINotify_tap_346fccac5823e4ff(intgo _swig_go_0) {
+ITapQuoteAPINotify *_wrap__swig_NewDirectorITapQuoteAPINotifyITapQuoteAPINotify_tap_d0ee4858b481f089(intgo _swig_go_0) {
   int arg1 ;
   ITapQuoteAPINotify *result = 0 ;
   ITapQuoteAPINotify *_swig_go_result;
@@ -3658,7 +3648,7 @@ ITapQuoteAPINotify *_wrap__swig_NewDirectorITapQuoteAPINotifyITapQuoteAPINotify_
 }
 
 
-void _wrap_ITapQuoteAPINotify_OnRspLogin_tap_346fccac5823e4ff(ITapQuoteAPINotify *_swig_go_0, intgo _swig_go_1, TapAPIQuotLoginRspInfo *_swig_go_2) {
+void _wrap_ITapQuoteAPINotify_OnRspLogin_tap_d0ee4858b481f089(ITapQuoteAPINotify *_swig_go_0, intgo _swig_go_1, TapAPIQuotLoginRspInfo *_swig_go_2) {
   ITapQuoteAPINotify *arg1 = (ITapQuoteAPINotify *) 0 ;
   TAPIINT32 arg2 ;
   TapAPIQuotLoginRspInfo *arg3 = (TapAPIQuotLoginRspInfo *) 0 ;
@@ -3672,7 +3662,7 @@ void _wrap_ITapQuoteAPINotify_OnRspLogin_tap_346fccac5823e4ff(ITapQuoteAPINotify
 }
 
 
-void _wrap_ITapQuoteAPINotify_OnAPIReady_tap_346fccac5823e4ff(ITapQuoteAPINotify *_swig_go_0) {
+void _wrap_ITapQuoteAPINotify_OnAPIReady_tap_d0ee4858b481f089(ITapQuoteAPINotify *_swig_go_0) {
   ITapQuoteAPINotify *arg1 = (ITapQuoteAPINotify *) 0 ;
   
   arg1 = *(ITapQuoteAPINotify **)&_swig_go_0; 
@@ -3682,7 +3672,7 @@ void _wrap_ITapQuoteAPINotify_OnAPIReady_tap_346fccac5823e4ff(ITapQuoteAPINotify
 }
 
 
-void _wrap_ITapQuoteAPINotify_OnDisconnect_tap_346fccac5823e4ff(ITapQuoteAPINotify *_swig_go_0, intgo _swig_go_1) {
+void _wrap_ITapQuoteAPINotify_OnDisconnect_tap_d0ee4858b481f089(ITapQuoteAPINotify *_swig_go_0, intgo _swig_go_1) {
   ITapQuoteAPINotify *arg1 = (ITapQuoteAPINotify *) 0 ;
   TAPIINT32 arg2 ;
   
@@ -3694,7 +3684,7 @@ void _wrap_ITapQuoteAPINotify_OnDisconnect_tap_346fccac5823e4ff(ITapQuoteAPINoti
 }
 
 
-void _wrap_ITapQuoteAPINotify_OnRspQryCommodity_tap_346fccac5823e4ff(ITapQuoteAPINotify *_swig_go_0, intgo _swig_go_1, intgo _swig_go_2, char _swig_go_3, TapAPIQuoteCommodityInfo *_swig_go_4) {
+void _wrap_ITapQuoteAPINotify_OnRspQryCommodity_tap_d0ee4858b481f089(ITapQuoteAPINotify *_swig_go_0, intgo _swig_go_1, intgo _swig_go_2, char _swig_go_3, TapAPIQuoteCommodityInfo *_swig_go_4) {
   ITapQuoteAPINotify *arg1 = (ITapQuoteAPINotify *) 0 ;
   TAPIUINT32 arg2 ;
   TAPIINT32 arg3 ;
@@ -3712,7 +3702,7 @@ void _wrap_ITapQuoteAPINotify_OnRspQryCommodity_tap_346fccac5823e4ff(ITapQuoteAP
 }
 
 
-void _wrap_ITapQuoteAPINotify_OnRspQryContract_tap_346fccac5823e4ff(ITapQuoteAPINotify *_swig_go_0, intgo _swig_go_1, intgo _swig_go_2, char _swig_go_3, TapAPIQuoteContractInfo *_swig_go_4) {
+void _wrap_ITapQuoteAPINotify_OnRspQryContract_tap_d0ee4858b481f089(ITapQuoteAPINotify *_swig_go_0, intgo _swig_go_1, intgo _swig_go_2, char _swig_go_3, TapAPIQuoteContractInfo *_swig_go_4) {
   ITapQuoteAPINotify *arg1 = (ITapQuoteAPINotify *) 0 ;
   TAPIUINT32 arg2 ;
   TAPIINT32 arg3 ;
@@ -3730,7 +3720,7 @@ void _wrap_ITapQuoteAPINotify_OnRspQryContract_tap_346fccac5823e4ff(ITapQuoteAPI
 }
 
 
-void _wrap_ITapQuoteAPINotify_OnRspSubscribeQuote_tap_346fccac5823e4ff(ITapQuoteAPINotify *_swig_go_0, intgo _swig_go_1, intgo _swig_go_2, char _swig_go_3, TapAPIQuoteWhole *_swig_go_4) {
+void _wrap_ITapQuoteAPINotify_OnRspSubscribeQuote_tap_d0ee4858b481f089(ITapQuoteAPINotify *_swig_go_0, intgo _swig_go_1, intgo _swig_go_2, char _swig_go_3, TapAPIQuoteWhole *_swig_go_4) {
   ITapQuoteAPINotify *arg1 = (ITapQuoteAPINotify *) 0 ;
   TAPIUINT32 arg2 ;
   TAPIINT32 arg3 ;
@@ -3748,7 +3738,7 @@ void _wrap_ITapQuoteAPINotify_OnRspSubscribeQuote_tap_346fccac5823e4ff(ITapQuote
 }
 
 
-void _wrap_ITapQuoteAPINotify_OnRspUnSubscribeQuote_tap_346fccac5823e4ff(ITapQuoteAPINotify *_swig_go_0, intgo _swig_go_1, intgo _swig_go_2, char _swig_go_3, TapAPIContract *_swig_go_4) {
+void _wrap_ITapQuoteAPINotify_OnRspUnSubscribeQuote_tap_d0ee4858b481f089(ITapQuoteAPINotify *_swig_go_0, intgo _swig_go_1, intgo _swig_go_2, char _swig_go_3, TapAPIContract *_swig_go_4) {
   ITapQuoteAPINotify *arg1 = (ITapQuoteAPINotify *) 0 ;
   TAPIUINT32 arg2 ;
   TAPIINT32 arg3 ;
@@ -3766,7 +3756,7 @@ void _wrap_ITapQuoteAPINotify_OnRspUnSubscribeQuote_tap_346fccac5823e4ff(ITapQuo
 }
 
 
-void _wrap_ITapQuoteAPINotify_OnRtnQuote_tap_346fccac5823e4ff(ITapQuoteAPINotify *_swig_go_0, TapAPIQuoteWhole *_swig_go_1) {
+void _wrap_ITapQuoteAPINotify_OnRtnQuote_tap_d0ee4858b481f089(ITapQuoteAPINotify *_swig_go_0, TapAPIQuoteWhole *_swig_go_1) {
   ITapQuoteAPINotify *arg1 = (ITapQuoteAPINotify *) 0 ;
   TapAPIQuoteWhole *arg2 = (TapAPIQuoteWhole *) 0 ;
   
@@ -3778,7 +3768,7 @@ void _wrap_ITapQuoteAPINotify_OnRtnQuote_tap_346fccac5823e4ff(ITapQuoteAPINotify
 }
 
 
-void _wrap_delete_ITapQuoteAPINotify_tap_346fccac5823e4ff(ITapQuoteAPINotify *_swig_go_0) {
+void _wrap_delete_ITapQuoteAPINotify_tap_d0ee4858b481f089(ITapQuoteAPINotify *_swig_go_0) {
   ITapQuoteAPINotify *arg1 = (ITapQuoteAPINotify *) 0 ;
   
   arg1 = *(ITapQuoteAPINotify **)&_swig_go_0; 
@@ -3788,7 +3778,7 @@ void _wrap_delete_ITapQuoteAPINotify_tap_346fccac5823e4ff(ITapQuoteAPINotify *_s
 }
 
 
-intgo _wrap_ITapQuoteAPI_SetAPINotify_tap_346fccac5823e4ff(ITapQuoteAPI *_swig_go_0, ITapQuoteAPINotify *_swig_go_1) {
+intgo _wrap_ITapQuoteAPI_SetAPINotify_tap_d0ee4858b481f089(ITapQuoteAPI *_swig_go_0, ITapQuoteAPINotify *_swig_go_1) {
   ITapQuoteAPI *arg1 = (ITapQuoteAPI *) 0 ;
   ITapQuoteAPINotify *arg2 = (ITapQuoteAPINotify *) 0 ;
   TAPIINT32 result;
@@ -3803,7 +3793,7 @@ intgo _wrap_ITapQuoteAPI_SetAPINotify_tap_346fccac5823e4ff(ITapQuoteAPI *_swig_g
 }
 
 
-intgo _wrap_ITapQuoteAPI_SetHostAddress_tap_346fccac5823e4ff(ITapQuoteAPI *_swig_go_0, _gostring_ _swig_go_1, short _swig_go_2) {
+intgo _wrap_ITapQuoteAPI_SetHostAddress_tap_d0ee4858b481f089(ITapQuoteAPI *_swig_go_0, _gostring_ _swig_go_1, short _swig_go_2) {
   ITapQuoteAPI *arg1 = (ITapQuoteAPI *) 0 ;
   TAPICHAR *arg2 = (TAPICHAR *) 0 ;
   TAPIUINT16 arg3 ;
@@ -3825,7 +3815,7 @@ intgo _wrap_ITapQuoteAPI_SetHostAddress_tap_346fccac5823e4ff(ITapQuoteAPI *_swig
 }
 
 
-intgo _wrap_ITapQuoteAPI_Login_tap_346fccac5823e4ff(ITapQuoteAPI *_swig_go_0, TapAPIQuoteLoginAuth *_swig_go_1) {
+intgo _wrap_ITapQuoteAPI_Login_tap_d0ee4858b481f089(ITapQuoteAPI *_swig_go_0, TapAPIQuoteLoginAuth *_swig_go_1) {
   ITapQuoteAPI *arg1 = (ITapQuoteAPI *) 0 ;
   TapAPIQuoteLoginAuth *arg2 = (TapAPIQuoteLoginAuth *) 0 ;
   TAPIINT32 result;
@@ -3840,7 +3830,7 @@ intgo _wrap_ITapQuoteAPI_Login_tap_346fccac5823e4ff(ITapQuoteAPI *_swig_go_0, Ta
 }
 
 
-intgo _wrap_ITapQuoteAPI_Disconnect_tap_346fccac5823e4ff(ITapQuoteAPI *_swig_go_0) {
+intgo _wrap_ITapQuoteAPI_Disconnect_tap_d0ee4858b481f089(ITapQuoteAPI *_swig_go_0) {
   ITapQuoteAPI *arg1 = (ITapQuoteAPI *) 0 ;
   TAPIINT32 result;
   intgo _swig_go_result;
@@ -3853,7 +3843,7 @@ intgo _wrap_ITapQuoteAPI_Disconnect_tap_346fccac5823e4ff(ITapQuoteAPI *_swig_go_
 }
 
 
-intgo _wrap_ITapQuoteAPI_QryCommodity_tap_346fccac5823e4ff(ITapQuoteAPI *_swig_go_0, intgo *_swig_go_1) {
+intgo _wrap_ITapQuoteAPI_QryCommodity_tap_d0ee4858b481f089(ITapQuoteAPI *_swig_go_0, intgo *_swig_go_1) {
   ITapQuoteAPI *arg1 = (ITapQuoteAPI *) 0 ;
   TAPIUINT32 *arg2 = (TAPIUINT32 *) 0 ;
   TAPIINT32 result;
@@ -3868,7 +3858,7 @@ intgo _wrap_ITapQuoteAPI_QryCommodity_tap_346fccac5823e4ff(ITapQuoteAPI *_swig_g
 }
 
 
-intgo _wrap_ITapQuoteAPI_QryContract_tap_346fccac5823e4ff(ITapQuoteAPI *_swig_go_0, intgo *_swig_go_1, TapAPICommodity *_swig_go_2) {
+intgo _wrap_ITapQuoteAPI_QryContract_tap_d0ee4858b481f089(ITapQuoteAPI *_swig_go_0, intgo *_swig_go_1, TapAPICommodity *_swig_go_2) {
   ITapQuoteAPI *arg1 = (ITapQuoteAPI *) 0 ;
   TAPIUINT32 *arg2 = (TAPIUINT32 *) 0 ;
   TapAPICommodity *arg3 = (TapAPICommodity *) 0 ;
@@ -3885,7 +3875,7 @@ intgo _wrap_ITapQuoteAPI_QryContract_tap_346fccac5823e4ff(ITapQuoteAPI *_swig_go
 }
 
 
-intgo _wrap_ITapQuoteAPI_SubscribeQuote_tap_346fccac5823e4ff(ITapQuoteAPI *_swig_go_0, intgo *_swig_go_1, TapAPIContract *_swig_go_2) {
+intgo _wrap_ITapQuoteAPI_SubscribeQuote_tap_d0ee4858b481f089(ITapQuoteAPI *_swig_go_0, intgo *_swig_go_1, TapAPIContract *_swig_go_2) {
   ITapQuoteAPI *arg1 = (ITapQuoteAPI *) 0 ;
   TAPIUINT32 *arg2 = (TAPIUINT32 *) 0 ;
   TapAPIContract *arg3 = (TapAPIContract *) 0 ;
@@ -3902,7 +3892,7 @@ intgo _wrap_ITapQuoteAPI_SubscribeQuote_tap_346fccac5823e4ff(ITapQuoteAPI *_swig
 }
 
 
-intgo _wrap_ITapQuoteAPI_UnSubscribeQuote_tap_346fccac5823e4ff(ITapQuoteAPI *_swig_go_0, intgo *_swig_go_1, TapAPIContract *_swig_go_2) {
+intgo _wrap_ITapQuoteAPI_UnSubscribeQuote_tap_d0ee4858b481f089(ITapQuoteAPI *_swig_go_0, intgo *_swig_go_1, TapAPIContract *_swig_go_2) {
   ITapQuoteAPI *arg1 = (ITapQuoteAPI *) 0 ;
   TAPIUINT32 *arg2 = (TAPIUINT32 *) 0 ;
   TapAPIContract *arg3 = (TapAPIContract *) 0 ;
@@ -3919,7 +3909,7 @@ intgo _wrap_ITapQuoteAPI_UnSubscribeQuote_tap_346fccac5823e4ff(ITapQuoteAPI *_sw
 }
 
 
-void _wrap_delete_ITapQuoteAPI_tap_346fccac5823e4ff(ITapQuoteAPI *_swig_go_0) {
+void _wrap_delete_ITapQuoteAPI_tap_d0ee4858b481f089(ITapQuoteAPI *_swig_go_0) {
   ITapQuoteAPI *arg1 = (ITapQuoteAPI *) 0 ;
   
   arg1 = *(ITapQuoteAPI **)&_swig_go_0; 
@@ -3929,33 +3919,27 @@ void _wrap_delete_ITapQuoteAPI_tap_346fccac5823e4ff(ITapQuoteAPI *_swig_go_0) {
 }
 
 
-ITapQuoteAPI *_wrap_CreateTapQuoteAPI_tap_346fccac5823e4ff(TapAPIApplicationInfo *_swig_go_0, _goslice_ _swig_go_1) {
+ITapQuoteAPI *_wrap_CreateTapQuoteAPI_tap_d0ee4858b481f089(TapAPIApplicationInfo *_swig_go_0, intgo *_swig_go_1) {
   TapAPIApplicationInfo *arg1 = (TapAPIApplicationInfo *) 0 ;
   TAPIINT32 *arg2 = 0 ;
-  TAPIINT32 temp2 ;
+  int e2 ;
   ITapQuoteAPI *result = 0 ;
   ITapQuoteAPI *_swig_go_result;
   
   arg1 = *(TapAPIApplicationInfo **)&_swig_go_0; 
-  {
-    if (_swig_go_1.len == 0) {
-      _swig_gopanic("array must contain at least 1 element");
-    }
-    arg2 = &temp2;
-  }
+  
+  e2 = (int)*_swig_go_1;
+  arg2 = &e2;
+  
   
   result = (ITapQuoteAPI *)CreateTapQuoteAPI((TapAPIApplicationInfo const *)arg1,*arg2);
   *(ITapQuoteAPI **)&_swig_go_result = (ITapQuoteAPI *)result; 
-  {
-    int* a = (int *) _swig_go_1.array;
-    a[0] = temp2;
-  }
-  
+  *_swig_go_1 = (intgo)e2; 
   return _swig_go_result;
 }
 
 
-void _wrap_FreeTapQuoteAPI_tap_346fccac5823e4ff(ITapQuoteAPI *_swig_go_0) {
+void _wrap_FreeTapQuoteAPI_tap_d0ee4858b481f089(ITapQuoteAPI *_swig_go_0) {
   ITapQuoteAPI *arg1 = (ITapQuoteAPI *) 0 ;
   
   arg1 = *(ITapQuoteAPI **)&_swig_go_0; 
@@ -3965,7 +3949,7 @@ void _wrap_FreeTapQuoteAPI_tap_346fccac5823e4ff(ITapQuoteAPI *_swig_go_0) {
 }
 
 
-_gostring_ _wrap_GetTapQuoteAPIVersion_tap_346fccac5823e4ff() {
+_gostring_ _wrap_GetTapQuoteAPIVersion_tap_d0ee4858b481f089() {
   TAPICHAR *result = 0 ;
   _gostring_ _swig_go_result;
   
@@ -3976,7 +3960,7 @@ _gostring_ _wrap_GetTapQuoteAPIVersion_tap_346fccac5823e4ff() {
 }
 
 
-intgo _wrap_SetTapQuoteAPIDataPath_tap_346fccac5823e4ff(_gostring_ _swig_go_0) {
+intgo _wrap_SetTapQuoteAPIDataPath_tap_d0ee4858b481f089(_gostring_ _swig_go_0) {
   TAPICHAR *arg1 = (TAPICHAR *) 0 ;
   TAPIINT32 result;
   intgo _swig_go_result;
@@ -3994,7 +3978,7 @@ intgo _wrap_SetTapQuoteAPIDataPath_tap_346fccac5823e4ff(_gostring_ _swig_go_0) {
 }
 
 
-intgo _wrap_SetTapQuoteAPILogLevel_tap_346fccac5823e4ff(char _swig_go_0) {
+intgo _wrap_SetTapQuoteAPILogLevel_tap_d0ee4858b481f089(char _swig_go_0) {
   TAPILOGLEVEL arg1 ;
   TAPIINT32 result;
   intgo _swig_go_result;
@@ -4007,7 +3991,7 @@ intgo _wrap_SetTapQuoteAPILogLevel_tap_346fccac5823e4ff(char _swig_go_0) {
 }
 
 
-void _wrap_TapAPIQuoteLoginAuth_UserNo_set_tap_346fccac5823e4ff(TapAPIQuoteLoginAuth *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPIQuoteLoginAuth_UserNo_set_tap_d0ee4858b481f089(TapAPIQuoteLoginAuth *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPIQuoteLoginAuth *arg1 = (TapAPIQuoteLoginAuth *) 0 ;
   char *arg2 ;
   
@@ -4031,7 +4015,7 @@ void _wrap_TapAPIQuoteLoginAuth_UserNo_set_tap_346fccac5823e4ff(TapAPIQuoteLogin
 }
 
 
-_gostring_ _wrap_TapAPIQuoteLoginAuth_UserNo_get_tap_346fccac5823e4ff(TapAPIQuoteLoginAuth *_swig_go_0) {
+_gostring_ _wrap_TapAPIQuoteLoginAuth_UserNo_get_tap_d0ee4858b481f089(TapAPIQuoteLoginAuth *_swig_go_0) {
   TapAPIQuoteLoginAuth *arg1 = (TapAPIQuoteLoginAuth *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -4044,7 +4028,7 @@ _gostring_ _wrap_TapAPIQuoteLoginAuth_UserNo_get_tap_346fccac5823e4ff(TapAPIQuot
 }
 
 
-void _wrap_TapAPIQuoteLoginAuth_ISModifyPassword_set_tap_346fccac5823e4ff(TapAPIQuoteLoginAuth *_swig_go_0, char _swig_go_1) {
+void _wrap_TapAPIQuoteLoginAuth_ISModifyPassword_set_tap_d0ee4858b481f089(TapAPIQuoteLoginAuth *_swig_go_0, char _swig_go_1) {
   TapAPIQuoteLoginAuth *arg1 = (TapAPIQuoteLoginAuth *) 0 ;
   TAPIYNFLAG arg2 ;
   
@@ -4056,7 +4040,7 @@ void _wrap_TapAPIQuoteLoginAuth_ISModifyPassword_set_tap_346fccac5823e4ff(TapAPI
 }
 
 
-char _wrap_TapAPIQuoteLoginAuth_ISModifyPassword_get_tap_346fccac5823e4ff(TapAPIQuoteLoginAuth *_swig_go_0) {
+char _wrap_TapAPIQuoteLoginAuth_ISModifyPassword_get_tap_d0ee4858b481f089(TapAPIQuoteLoginAuth *_swig_go_0) {
   TapAPIQuoteLoginAuth *arg1 = (TapAPIQuoteLoginAuth *) 0 ;
   TAPIYNFLAG result;
   char _swig_go_result;
@@ -4069,7 +4053,7 @@ char _wrap_TapAPIQuoteLoginAuth_ISModifyPassword_get_tap_346fccac5823e4ff(TapAPI
 }
 
 
-void _wrap_TapAPIQuoteLoginAuth_Password_set_tap_346fccac5823e4ff(TapAPIQuoteLoginAuth *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPIQuoteLoginAuth_Password_set_tap_d0ee4858b481f089(TapAPIQuoteLoginAuth *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPIQuoteLoginAuth *arg1 = (TapAPIQuoteLoginAuth *) 0 ;
   char *arg2 ;
   
@@ -4093,7 +4077,7 @@ void _wrap_TapAPIQuoteLoginAuth_Password_set_tap_346fccac5823e4ff(TapAPIQuoteLog
 }
 
 
-_gostring_ _wrap_TapAPIQuoteLoginAuth_Password_get_tap_346fccac5823e4ff(TapAPIQuoteLoginAuth *_swig_go_0) {
+_gostring_ _wrap_TapAPIQuoteLoginAuth_Password_get_tap_d0ee4858b481f089(TapAPIQuoteLoginAuth *_swig_go_0) {
   TapAPIQuoteLoginAuth *arg1 = (TapAPIQuoteLoginAuth *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -4106,7 +4090,7 @@ _gostring_ _wrap_TapAPIQuoteLoginAuth_Password_get_tap_346fccac5823e4ff(TapAPIQu
 }
 
 
-void _wrap_TapAPIQuoteLoginAuth_NewPassword_set_tap_346fccac5823e4ff(TapAPIQuoteLoginAuth *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPIQuoteLoginAuth_NewPassword_set_tap_d0ee4858b481f089(TapAPIQuoteLoginAuth *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPIQuoteLoginAuth *arg1 = (TapAPIQuoteLoginAuth *) 0 ;
   char *arg2 ;
   
@@ -4130,7 +4114,7 @@ void _wrap_TapAPIQuoteLoginAuth_NewPassword_set_tap_346fccac5823e4ff(TapAPIQuote
 }
 
 
-_gostring_ _wrap_TapAPIQuoteLoginAuth_NewPassword_get_tap_346fccac5823e4ff(TapAPIQuoteLoginAuth *_swig_go_0) {
+_gostring_ _wrap_TapAPIQuoteLoginAuth_NewPassword_get_tap_d0ee4858b481f089(TapAPIQuoteLoginAuth *_swig_go_0) {
   TapAPIQuoteLoginAuth *arg1 = (TapAPIQuoteLoginAuth *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -4143,7 +4127,7 @@ _gostring_ _wrap_TapAPIQuoteLoginAuth_NewPassword_get_tap_346fccac5823e4ff(TapAP
 }
 
 
-void _wrap_TapAPIQuoteLoginAuth_QuoteTempPassword_set_tap_346fccac5823e4ff(TapAPIQuoteLoginAuth *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPIQuoteLoginAuth_QuoteTempPassword_set_tap_d0ee4858b481f089(TapAPIQuoteLoginAuth *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPIQuoteLoginAuth *arg1 = (TapAPIQuoteLoginAuth *) 0 ;
   char *arg2 ;
   
@@ -4167,7 +4151,7 @@ void _wrap_TapAPIQuoteLoginAuth_QuoteTempPassword_set_tap_346fccac5823e4ff(TapAP
 }
 
 
-_gostring_ _wrap_TapAPIQuoteLoginAuth_QuoteTempPassword_get_tap_346fccac5823e4ff(TapAPIQuoteLoginAuth *_swig_go_0) {
+_gostring_ _wrap_TapAPIQuoteLoginAuth_QuoteTempPassword_get_tap_d0ee4858b481f089(TapAPIQuoteLoginAuth *_swig_go_0) {
   TapAPIQuoteLoginAuth *arg1 = (TapAPIQuoteLoginAuth *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -4180,7 +4164,7 @@ _gostring_ _wrap_TapAPIQuoteLoginAuth_QuoteTempPassword_get_tap_346fccac5823e4ff
 }
 
 
-void _wrap_TapAPIQuoteLoginAuth_ISDDA_set_tap_346fccac5823e4ff(TapAPIQuoteLoginAuth *_swig_go_0, char _swig_go_1) {
+void _wrap_TapAPIQuoteLoginAuth_ISDDA_set_tap_d0ee4858b481f089(TapAPIQuoteLoginAuth *_swig_go_0, char _swig_go_1) {
   TapAPIQuoteLoginAuth *arg1 = (TapAPIQuoteLoginAuth *) 0 ;
   TAPIYNFLAG arg2 ;
   
@@ -4192,7 +4176,7 @@ void _wrap_TapAPIQuoteLoginAuth_ISDDA_set_tap_346fccac5823e4ff(TapAPIQuoteLoginA
 }
 
 
-char _wrap_TapAPIQuoteLoginAuth_ISDDA_get_tap_346fccac5823e4ff(TapAPIQuoteLoginAuth *_swig_go_0) {
+char _wrap_TapAPIQuoteLoginAuth_ISDDA_get_tap_d0ee4858b481f089(TapAPIQuoteLoginAuth *_swig_go_0) {
   TapAPIQuoteLoginAuth *arg1 = (TapAPIQuoteLoginAuth *) 0 ;
   TAPIYNFLAG result;
   char _swig_go_result;
@@ -4205,7 +4189,7 @@ char _wrap_TapAPIQuoteLoginAuth_ISDDA_get_tap_346fccac5823e4ff(TapAPIQuoteLoginA
 }
 
 
-void _wrap_TapAPIQuoteLoginAuth_DDASerialNo_set_tap_346fccac5823e4ff(TapAPIQuoteLoginAuth *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPIQuoteLoginAuth_DDASerialNo_set_tap_d0ee4858b481f089(TapAPIQuoteLoginAuth *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPIQuoteLoginAuth *arg1 = (TapAPIQuoteLoginAuth *) 0 ;
   char *arg2 ;
   
@@ -4229,7 +4213,7 @@ void _wrap_TapAPIQuoteLoginAuth_DDASerialNo_set_tap_346fccac5823e4ff(TapAPIQuote
 }
 
 
-_gostring_ _wrap_TapAPIQuoteLoginAuth_DDASerialNo_get_tap_346fccac5823e4ff(TapAPIQuoteLoginAuth *_swig_go_0) {
+_gostring_ _wrap_TapAPIQuoteLoginAuth_DDASerialNo_get_tap_d0ee4858b481f089(TapAPIQuoteLoginAuth *_swig_go_0) {
   TapAPIQuoteLoginAuth *arg1 = (TapAPIQuoteLoginAuth *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -4242,7 +4226,7 @@ _gostring_ _wrap_TapAPIQuoteLoginAuth_DDASerialNo_get_tap_346fccac5823e4ff(TapAP
 }
 
 
-TapAPIQuoteLoginAuth *_wrap_new_TapAPIQuoteLoginAuth_tap_346fccac5823e4ff() {
+TapAPIQuoteLoginAuth *_wrap_new_TapAPIQuoteLoginAuth_tap_d0ee4858b481f089() {
   TapAPIQuoteLoginAuth *result = 0 ;
   TapAPIQuoteLoginAuth *_swig_go_result;
   
@@ -4253,7 +4237,7 @@ TapAPIQuoteLoginAuth *_wrap_new_TapAPIQuoteLoginAuth_tap_346fccac5823e4ff() {
 }
 
 
-void _wrap_delete_TapAPIQuoteLoginAuth_tap_346fccac5823e4ff(TapAPIQuoteLoginAuth *_swig_go_0) {
+void _wrap_delete_TapAPIQuoteLoginAuth_tap_d0ee4858b481f089(TapAPIQuoteLoginAuth *_swig_go_0) {
   TapAPIQuoteLoginAuth *arg1 = (TapAPIQuoteLoginAuth *) 0 ;
   
   arg1 = *(TapAPIQuoteLoginAuth **)&_swig_go_0; 
@@ -4263,7 +4247,7 @@ void _wrap_delete_TapAPIQuoteLoginAuth_tap_346fccac5823e4ff(TapAPIQuoteLoginAuth
 }
 
 
-void _wrap_TapAPIQuotLoginRspInfo_UserNo_set_tap_346fccac5823e4ff(TapAPIQuotLoginRspInfo *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPIQuotLoginRspInfo_UserNo_set_tap_d0ee4858b481f089(TapAPIQuotLoginRspInfo *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPIQuotLoginRspInfo *arg1 = (TapAPIQuotLoginRspInfo *) 0 ;
   char *arg2 ;
   
@@ -4287,7 +4271,7 @@ void _wrap_TapAPIQuotLoginRspInfo_UserNo_set_tap_346fccac5823e4ff(TapAPIQuotLogi
 }
 
 
-_gostring_ _wrap_TapAPIQuotLoginRspInfo_UserNo_get_tap_346fccac5823e4ff(TapAPIQuotLoginRspInfo *_swig_go_0) {
+_gostring_ _wrap_TapAPIQuotLoginRspInfo_UserNo_get_tap_d0ee4858b481f089(TapAPIQuotLoginRspInfo *_swig_go_0) {
   TapAPIQuotLoginRspInfo *arg1 = (TapAPIQuotLoginRspInfo *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -4300,7 +4284,7 @@ _gostring_ _wrap_TapAPIQuotLoginRspInfo_UserNo_get_tap_346fccac5823e4ff(TapAPIQu
 }
 
 
-void _wrap_TapAPIQuotLoginRspInfo_UserType_set_tap_346fccac5823e4ff(TapAPIQuotLoginRspInfo *_swig_go_0, intgo _swig_go_1) {
+void _wrap_TapAPIQuotLoginRspInfo_UserType_set_tap_d0ee4858b481f089(TapAPIQuotLoginRspInfo *_swig_go_0, intgo _swig_go_1) {
   TapAPIQuotLoginRspInfo *arg1 = (TapAPIQuotLoginRspInfo *) 0 ;
   TAPIINT32 arg2 ;
   
@@ -4312,7 +4296,7 @@ void _wrap_TapAPIQuotLoginRspInfo_UserType_set_tap_346fccac5823e4ff(TapAPIQuotLo
 }
 
 
-intgo _wrap_TapAPIQuotLoginRspInfo_UserType_get_tap_346fccac5823e4ff(TapAPIQuotLoginRspInfo *_swig_go_0) {
+intgo _wrap_TapAPIQuotLoginRspInfo_UserType_get_tap_d0ee4858b481f089(TapAPIQuotLoginRspInfo *_swig_go_0) {
   TapAPIQuotLoginRspInfo *arg1 = (TapAPIQuotLoginRspInfo *) 0 ;
   TAPIINT32 result;
   intgo _swig_go_result;
@@ -4325,7 +4309,7 @@ intgo _wrap_TapAPIQuotLoginRspInfo_UserType_get_tap_346fccac5823e4ff(TapAPIQuotL
 }
 
 
-void _wrap_TapAPIQuotLoginRspInfo_UserName_set_tap_346fccac5823e4ff(TapAPIQuotLoginRspInfo *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPIQuotLoginRspInfo_UserName_set_tap_d0ee4858b481f089(TapAPIQuotLoginRspInfo *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPIQuotLoginRspInfo *arg1 = (TapAPIQuotLoginRspInfo *) 0 ;
   char *arg2 ;
   
@@ -4349,7 +4333,7 @@ void _wrap_TapAPIQuotLoginRspInfo_UserName_set_tap_346fccac5823e4ff(TapAPIQuotLo
 }
 
 
-_gostring_ _wrap_TapAPIQuotLoginRspInfo_UserName_get_tap_346fccac5823e4ff(TapAPIQuotLoginRspInfo *_swig_go_0) {
+_gostring_ _wrap_TapAPIQuotLoginRspInfo_UserName_get_tap_d0ee4858b481f089(TapAPIQuotLoginRspInfo *_swig_go_0) {
   TapAPIQuotLoginRspInfo *arg1 = (TapAPIQuotLoginRspInfo *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -4362,7 +4346,7 @@ _gostring_ _wrap_TapAPIQuotLoginRspInfo_UserName_get_tap_346fccac5823e4ff(TapAPI
 }
 
 
-void _wrap_TapAPIQuotLoginRspInfo_QuoteTempPassword_set_tap_346fccac5823e4ff(TapAPIQuotLoginRspInfo *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPIQuotLoginRspInfo_QuoteTempPassword_set_tap_d0ee4858b481f089(TapAPIQuotLoginRspInfo *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPIQuotLoginRspInfo *arg1 = (TapAPIQuotLoginRspInfo *) 0 ;
   char *arg2 ;
   
@@ -4386,7 +4370,7 @@ void _wrap_TapAPIQuotLoginRspInfo_QuoteTempPassword_set_tap_346fccac5823e4ff(Tap
 }
 
 
-_gostring_ _wrap_TapAPIQuotLoginRspInfo_QuoteTempPassword_get_tap_346fccac5823e4ff(TapAPIQuotLoginRspInfo *_swig_go_0) {
+_gostring_ _wrap_TapAPIQuotLoginRspInfo_QuoteTempPassword_get_tap_d0ee4858b481f089(TapAPIQuotLoginRspInfo *_swig_go_0) {
   TapAPIQuotLoginRspInfo *arg1 = (TapAPIQuotLoginRspInfo *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -4399,7 +4383,7 @@ _gostring_ _wrap_TapAPIQuotLoginRspInfo_QuoteTempPassword_get_tap_346fccac5823e4
 }
 
 
-void _wrap_TapAPIQuotLoginRspInfo_ReservedInfo_set_tap_346fccac5823e4ff(TapAPIQuotLoginRspInfo *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPIQuotLoginRspInfo_ReservedInfo_set_tap_d0ee4858b481f089(TapAPIQuotLoginRspInfo *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPIQuotLoginRspInfo *arg1 = (TapAPIQuotLoginRspInfo *) 0 ;
   char *arg2 ;
   
@@ -4423,7 +4407,7 @@ void _wrap_TapAPIQuotLoginRspInfo_ReservedInfo_set_tap_346fccac5823e4ff(TapAPIQu
 }
 
 
-_gostring_ _wrap_TapAPIQuotLoginRspInfo_ReservedInfo_get_tap_346fccac5823e4ff(TapAPIQuotLoginRspInfo *_swig_go_0) {
+_gostring_ _wrap_TapAPIQuotLoginRspInfo_ReservedInfo_get_tap_d0ee4858b481f089(TapAPIQuotLoginRspInfo *_swig_go_0) {
   TapAPIQuotLoginRspInfo *arg1 = (TapAPIQuotLoginRspInfo *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -4436,7 +4420,7 @@ _gostring_ _wrap_TapAPIQuotLoginRspInfo_ReservedInfo_get_tap_346fccac5823e4ff(Ta
 }
 
 
-void _wrap_TapAPIQuotLoginRspInfo_LastLoginIP_set_tap_346fccac5823e4ff(TapAPIQuotLoginRspInfo *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPIQuotLoginRspInfo_LastLoginIP_set_tap_d0ee4858b481f089(TapAPIQuotLoginRspInfo *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPIQuotLoginRspInfo *arg1 = (TapAPIQuotLoginRspInfo *) 0 ;
   char *arg2 ;
   
@@ -4460,7 +4444,7 @@ void _wrap_TapAPIQuotLoginRspInfo_LastLoginIP_set_tap_346fccac5823e4ff(TapAPIQuo
 }
 
 
-_gostring_ _wrap_TapAPIQuotLoginRspInfo_LastLoginIP_get_tap_346fccac5823e4ff(TapAPIQuotLoginRspInfo *_swig_go_0) {
+_gostring_ _wrap_TapAPIQuotLoginRspInfo_LastLoginIP_get_tap_d0ee4858b481f089(TapAPIQuotLoginRspInfo *_swig_go_0) {
   TapAPIQuotLoginRspInfo *arg1 = (TapAPIQuotLoginRspInfo *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -4473,7 +4457,7 @@ _gostring_ _wrap_TapAPIQuotLoginRspInfo_LastLoginIP_get_tap_346fccac5823e4ff(Tap
 }
 
 
-void _wrap_TapAPIQuotLoginRspInfo_LastLoginProt_set_tap_346fccac5823e4ff(TapAPIQuotLoginRspInfo *_swig_go_0, intgo _swig_go_1) {
+void _wrap_TapAPIQuotLoginRspInfo_LastLoginProt_set_tap_d0ee4858b481f089(TapAPIQuotLoginRspInfo *_swig_go_0, intgo _swig_go_1) {
   TapAPIQuotLoginRspInfo *arg1 = (TapAPIQuotLoginRspInfo *) 0 ;
   TAPIUINT32 arg2 ;
   
@@ -4485,7 +4469,7 @@ void _wrap_TapAPIQuotLoginRspInfo_LastLoginProt_set_tap_346fccac5823e4ff(TapAPIQ
 }
 
 
-intgo _wrap_TapAPIQuotLoginRspInfo_LastLoginProt_get_tap_346fccac5823e4ff(TapAPIQuotLoginRspInfo *_swig_go_0) {
+intgo _wrap_TapAPIQuotLoginRspInfo_LastLoginProt_get_tap_d0ee4858b481f089(TapAPIQuotLoginRspInfo *_swig_go_0) {
   TapAPIQuotLoginRspInfo *arg1 = (TapAPIQuotLoginRspInfo *) 0 ;
   TAPIUINT32 result;
   intgo _swig_go_result;
@@ -4498,7 +4482,7 @@ intgo _wrap_TapAPIQuotLoginRspInfo_LastLoginProt_get_tap_346fccac5823e4ff(TapAPI
 }
 
 
-void _wrap_TapAPIQuotLoginRspInfo_LastLoginTime_set_tap_346fccac5823e4ff(TapAPIQuotLoginRspInfo *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPIQuotLoginRspInfo_LastLoginTime_set_tap_d0ee4858b481f089(TapAPIQuotLoginRspInfo *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPIQuotLoginRspInfo *arg1 = (TapAPIQuotLoginRspInfo *) 0 ;
   char *arg2 ;
   
@@ -4522,7 +4506,7 @@ void _wrap_TapAPIQuotLoginRspInfo_LastLoginTime_set_tap_346fccac5823e4ff(TapAPIQ
 }
 
 
-_gostring_ _wrap_TapAPIQuotLoginRspInfo_LastLoginTime_get_tap_346fccac5823e4ff(TapAPIQuotLoginRspInfo *_swig_go_0) {
+_gostring_ _wrap_TapAPIQuotLoginRspInfo_LastLoginTime_get_tap_d0ee4858b481f089(TapAPIQuotLoginRspInfo *_swig_go_0) {
   TapAPIQuotLoginRspInfo *arg1 = (TapAPIQuotLoginRspInfo *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -4535,7 +4519,7 @@ _gostring_ _wrap_TapAPIQuotLoginRspInfo_LastLoginTime_get_tap_346fccac5823e4ff(T
 }
 
 
-void _wrap_TapAPIQuotLoginRspInfo_LastLogoutTime_set_tap_346fccac5823e4ff(TapAPIQuotLoginRspInfo *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPIQuotLoginRspInfo_LastLogoutTime_set_tap_d0ee4858b481f089(TapAPIQuotLoginRspInfo *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPIQuotLoginRspInfo *arg1 = (TapAPIQuotLoginRspInfo *) 0 ;
   char *arg2 ;
   
@@ -4559,7 +4543,7 @@ void _wrap_TapAPIQuotLoginRspInfo_LastLogoutTime_set_tap_346fccac5823e4ff(TapAPI
 }
 
 
-_gostring_ _wrap_TapAPIQuotLoginRspInfo_LastLogoutTime_get_tap_346fccac5823e4ff(TapAPIQuotLoginRspInfo *_swig_go_0) {
+_gostring_ _wrap_TapAPIQuotLoginRspInfo_LastLogoutTime_get_tap_d0ee4858b481f089(TapAPIQuotLoginRspInfo *_swig_go_0) {
   TapAPIQuotLoginRspInfo *arg1 = (TapAPIQuotLoginRspInfo *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -4572,7 +4556,7 @@ _gostring_ _wrap_TapAPIQuotLoginRspInfo_LastLogoutTime_get_tap_346fccac5823e4ff(
 }
 
 
-void _wrap_TapAPIQuotLoginRspInfo_TradeDate_set_tap_346fccac5823e4ff(TapAPIQuotLoginRspInfo *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPIQuotLoginRspInfo_TradeDate_set_tap_d0ee4858b481f089(TapAPIQuotLoginRspInfo *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPIQuotLoginRspInfo *arg1 = (TapAPIQuotLoginRspInfo *) 0 ;
   char *arg2 ;
   
@@ -4596,7 +4580,7 @@ void _wrap_TapAPIQuotLoginRspInfo_TradeDate_set_tap_346fccac5823e4ff(TapAPIQuotL
 }
 
 
-_gostring_ _wrap_TapAPIQuotLoginRspInfo_TradeDate_get_tap_346fccac5823e4ff(TapAPIQuotLoginRspInfo *_swig_go_0) {
+_gostring_ _wrap_TapAPIQuotLoginRspInfo_TradeDate_get_tap_d0ee4858b481f089(TapAPIQuotLoginRspInfo *_swig_go_0) {
   TapAPIQuotLoginRspInfo *arg1 = (TapAPIQuotLoginRspInfo *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -4609,7 +4593,7 @@ _gostring_ _wrap_TapAPIQuotLoginRspInfo_TradeDate_get_tap_346fccac5823e4ff(TapAP
 }
 
 
-void _wrap_TapAPIQuotLoginRspInfo_LastSettleTime_set_tap_346fccac5823e4ff(TapAPIQuotLoginRspInfo *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPIQuotLoginRspInfo_LastSettleTime_set_tap_d0ee4858b481f089(TapAPIQuotLoginRspInfo *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPIQuotLoginRspInfo *arg1 = (TapAPIQuotLoginRspInfo *) 0 ;
   char *arg2 ;
   
@@ -4633,7 +4617,7 @@ void _wrap_TapAPIQuotLoginRspInfo_LastSettleTime_set_tap_346fccac5823e4ff(TapAPI
 }
 
 
-_gostring_ _wrap_TapAPIQuotLoginRspInfo_LastSettleTime_get_tap_346fccac5823e4ff(TapAPIQuotLoginRspInfo *_swig_go_0) {
+_gostring_ _wrap_TapAPIQuotLoginRspInfo_LastSettleTime_get_tap_d0ee4858b481f089(TapAPIQuotLoginRspInfo *_swig_go_0) {
   TapAPIQuotLoginRspInfo *arg1 = (TapAPIQuotLoginRspInfo *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -4646,7 +4630,7 @@ _gostring_ _wrap_TapAPIQuotLoginRspInfo_LastSettleTime_get_tap_346fccac5823e4ff(
 }
 
 
-void _wrap_TapAPIQuotLoginRspInfo_StartTime_set_tap_346fccac5823e4ff(TapAPIQuotLoginRspInfo *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPIQuotLoginRspInfo_StartTime_set_tap_d0ee4858b481f089(TapAPIQuotLoginRspInfo *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPIQuotLoginRspInfo *arg1 = (TapAPIQuotLoginRspInfo *) 0 ;
   char *arg2 ;
   
@@ -4670,7 +4654,7 @@ void _wrap_TapAPIQuotLoginRspInfo_StartTime_set_tap_346fccac5823e4ff(TapAPIQuotL
 }
 
 
-_gostring_ _wrap_TapAPIQuotLoginRspInfo_StartTime_get_tap_346fccac5823e4ff(TapAPIQuotLoginRspInfo *_swig_go_0) {
+_gostring_ _wrap_TapAPIQuotLoginRspInfo_StartTime_get_tap_d0ee4858b481f089(TapAPIQuotLoginRspInfo *_swig_go_0) {
   TapAPIQuotLoginRspInfo *arg1 = (TapAPIQuotLoginRspInfo *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -4683,7 +4667,7 @@ _gostring_ _wrap_TapAPIQuotLoginRspInfo_StartTime_get_tap_346fccac5823e4ff(TapAP
 }
 
 
-void _wrap_TapAPIQuotLoginRspInfo_InitTime_set_tap_346fccac5823e4ff(TapAPIQuotLoginRspInfo *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPIQuotLoginRspInfo_InitTime_set_tap_d0ee4858b481f089(TapAPIQuotLoginRspInfo *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPIQuotLoginRspInfo *arg1 = (TapAPIQuotLoginRspInfo *) 0 ;
   char *arg2 ;
   
@@ -4707,7 +4691,7 @@ void _wrap_TapAPIQuotLoginRspInfo_InitTime_set_tap_346fccac5823e4ff(TapAPIQuotLo
 }
 
 
-_gostring_ _wrap_TapAPIQuotLoginRspInfo_InitTime_get_tap_346fccac5823e4ff(TapAPIQuotLoginRspInfo *_swig_go_0) {
+_gostring_ _wrap_TapAPIQuotLoginRspInfo_InitTime_get_tap_d0ee4858b481f089(TapAPIQuotLoginRspInfo *_swig_go_0) {
   TapAPIQuotLoginRspInfo *arg1 = (TapAPIQuotLoginRspInfo *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -4720,7 +4704,7 @@ _gostring_ _wrap_TapAPIQuotLoginRspInfo_InitTime_get_tap_346fccac5823e4ff(TapAPI
 }
 
 
-TapAPIQuotLoginRspInfo *_wrap_new_TapAPIQuotLoginRspInfo_tap_346fccac5823e4ff() {
+TapAPIQuotLoginRspInfo *_wrap_new_TapAPIQuotLoginRspInfo_tap_d0ee4858b481f089() {
   TapAPIQuotLoginRspInfo *result = 0 ;
   TapAPIQuotLoginRspInfo *_swig_go_result;
   
@@ -4731,7 +4715,7 @@ TapAPIQuotLoginRspInfo *_wrap_new_TapAPIQuotLoginRspInfo_tap_346fccac5823e4ff() 
 }
 
 
-void _wrap_delete_TapAPIQuotLoginRspInfo_tap_346fccac5823e4ff(TapAPIQuotLoginRspInfo *_swig_go_0) {
+void _wrap_delete_TapAPIQuotLoginRspInfo_tap_d0ee4858b481f089(TapAPIQuotLoginRspInfo *_swig_go_0) {
   TapAPIQuotLoginRspInfo *arg1 = (TapAPIQuotLoginRspInfo *) 0 ;
   
   arg1 = *(TapAPIQuotLoginRspInfo **)&_swig_go_0; 
@@ -4741,7 +4725,7 @@ void _wrap_delete_TapAPIQuotLoginRspInfo_tap_346fccac5823e4ff(TapAPIQuotLoginRsp
 }
 
 
-void _wrap_TapAPIQuoteCommodityInfo_Commodity_set_tap_346fccac5823e4ff(TapAPIQuoteCommodityInfo *_swig_go_0, TapAPICommodity *_swig_go_1) {
+void _wrap_TapAPIQuoteCommodityInfo_Commodity_set_tap_d0ee4858b481f089(TapAPIQuoteCommodityInfo *_swig_go_0, TapAPICommodity *_swig_go_1) {
   TapAPIQuoteCommodityInfo *arg1 = (TapAPIQuoteCommodityInfo *) 0 ;
   TapAPICommodity *arg2 = (TapAPICommodity *) 0 ;
   
@@ -4753,7 +4737,7 @@ void _wrap_TapAPIQuoteCommodityInfo_Commodity_set_tap_346fccac5823e4ff(TapAPIQuo
 }
 
 
-TapAPICommodity *_wrap_TapAPIQuoteCommodityInfo_Commodity_get_tap_346fccac5823e4ff(TapAPIQuoteCommodityInfo *_swig_go_0) {
+TapAPICommodity *_wrap_TapAPIQuoteCommodityInfo_Commodity_get_tap_d0ee4858b481f089(TapAPIQuoteCommodityInfo *_swig_go_0) {
   TapAPIQuoteCommodityInfo *arg1 = (TapAPIQuoteCommodityInfo *) 0 ;
   TapAPICommodity *result = 0 ;
   TapAPICommodity *_swig_go_result;
@@ -4766,7 +4750,7 @@ TapAPICommodity *_wrap_TapAPIQuoteCommodityInfo_Commodity_get_tap_346fccac5823e4
 }
 
 
-void _wrap_TapAPIQuoteCommodityInfo_CommodityName_set_tap_346fccac5823e4ff(TapAPIQuoteCommodityInfo *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPIQuoteCommodityInfo_CommodityName_set_tap_d0ee4858b481f089(TapAPIQuoteCommodityInfo *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPIQuoteCommodityInfo *arg1 = (TapAPIQuoteCommodityInfo *) 0 ;
   char *arg2 ;
   
@@ -4790,7 +4774,7 @@ void _wrap_TapAPIQuoteCommodityInfo_CommodityName_set_tap_346fccac5823e4ff(TapAP
 }
 
 
-_gostring_ _wrap_TapAPIQuoteCommodityInfo_CommodityName_get_tap_346fccac5823e4ff(TapAPIQuoteCommodityInfo *_swig_go_0) {
+_gostring_ _wrap_TapAPIQuoteCommodityInfo_CommodityName_get_tap_d0ee4858b481f089(TapAPIQuoteCommodityInfo *_swig_go_0) {
   TapAPIQuoteCommodityInfo *arg1 = (TapAPIQuoteCommodityInfo *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -4803,7 +4787,7 @@ _gostring_ _wrap_TapAPIQuoteCommodityInfo_CommodityName_get_tap_346fccac5823e4ff
 }
 
 
-void _wrap_TapAPIQuoteCommodityInfo_CommodityEngName_set_tap_346fccac5823e4ff(TapAPIQuoteCommodityInfo *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPIQuoteCommodityInfo_CommodityEngName_set_tap_d0ee4858b481f089(TapAPIQuoteCommodityInfo *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPIQuoteCommodityInfo *arg1 = (TapAPIQuoteCommodityInfo *) 0 ;
   char *arg2 ;
   
@@ -4827,7 +4811,7 @@ void _wrap_TapAPIQuoteCommodityInfo_CommodityEngName_set_tap_346fccac5823e4ff(Ta
 }
 
 
-_gostring_ _wrap_TapAPIQuoteCommodityInfo_CommodityEngName_get_tap_346fccac5823e4ff(TapAPIQuoteCommodityInfo *_swig_go_0) {
+_gostring_ _wrap_TapAPIQuoteCommodityInfo_CommodityEngName_get_tap_d0ee4858b481f089(TapAPIQuoteCommodityInfo *_swig_go_0) {
   TapAPIQuoteCommodityInfo *arg1 = (TapAPIQuoteCommodityInfo *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -4840,7 +4824,7 @@ _gostring_ _wrap_TapAPIQuoteCommodityInfo_CommodityEngName_get_tap_346fccac5823e
 }
 
 
-void _wrap_TapAPIQuoteCommodityInfo_ContractSize_set_tap_346fccac5823e4ff(TapAPIQuoteCommodityInfo *_swig_go_0, double _swig_go_1) {
+void _wrap_TapAPIQuoteCommodityInfo_ContractSize_set_tap_d0ee4858b481f089(TapAPIQuoteCommodityInfo *_swig_go_0, double _swig_go_1) {
   TapAPIQuoteCommodityInfo *arg1 = (TapAPIQuoteCommodityInfo *) 0 ;
   TAPIREAL64 arg2 ;
   
@@ -4852,7 +4836,7 @@ void _wrap_TapAPIQuoteCommodityInfo_ContractSize_set_tap_346fccac5823e4ff(TapAPI
 }
 
 
-double _wrap_TapAPIQuoteCommodityInfo_ContractSize_get_tap_346fccac5823e4ff(TapAPIQuoteCommodityInfo *_swig_go_0) {
+double _wrap_TapAPIQuoteCommodityInfo_ContractSize_get_tap_d0ee4858b481f089(TapAPIQuoteCommodityInfo *_swig_go_0) {
   TapAPIQuoteCommodityInfo *arg1 = (TapAPIQuoteCommodityInfo *) 0 ;
   TAPIREAL64 result;
   double _swig_go_result;
@@ -4865,7 +4849,7 @@ double _wrap_TapAPIQuoteCommodityInfo_ContractSize_get_tap_346fccac5823e4ff(TapA
 }
 
 
-void _wrap_TapAPIQuoteCommodityInfo_CommodityTickSize_set_tap_346fccac5823e4ff(TapAPIQuoteCommodityInfo *_swig_go_0, double _swig_go_1) {
+void _wrap_TapAPIQuoteCommodityInfo_CommodityTickSize_set_tap_d0ee4858b481f089(TapAPIQuoteCommodityInfo *_swig_go_0, double _swig_go_1) {
   TapAPIQuoteCommodityInfo *arg1 = (TapAPIQuoteCommodityInfo *) 0 ;
   TAPIREAL64 arg2 ;
   
@@ -4877,7 +4861,7 @@ void _wrap_TapAPIQuoteCommodityInfo_CommodityTickSize_set_tap_346fccac5823e4ff(T
 }
 
 
-double _wrap_TapAPIQuoteCommodityInfo_CommodityTickSize_get_tap_346fccac5823e4ff(TapAPIQuoteCommodityInfo *_swig_go_0) {
+double _wrap_TapAPIQuoteCommodityInfo_CommodityTickSize_get_tap_d0ee4858b481f089(TapAPIQuoteCommodityInfo *_swig_go_0) {
   TapAPIQuoteCommodityInfo *arg1 = (TapAPIQuoteCommodityInfo *) 0 ;
   TAPIREAL64 result;
   double _swig_go_result;
@@ -4890,7 +4874,7 @@ double _wrap_TapAPIQuoteCommodityInfo_CommodityTickSize_get_tap_346fccac5823e4ff
 }
 
 
-void _wrap_TapAPIQuoteCommodityInfo_CommodityDenominator_set_tap_346fccac5823e4ff(TapAPIQuoteCommodityInfo *_swig_go_0, intgo _swig_go_1) {
+void _wrap_TapAPIQuoteCommodityInfo_CommodityDenominator_set_tap_d0ee4858b481f089(TapAPIQuoteCommodityInfo *_swig_go_0, intgo _swig_go_1) {
   TapAPIQuoteCommodityInfo *arg1 = (TapAPIQuoteCommodityInfo *) 0 ;
   TAPIINT32 arg2 ;
   
@@ -4902,7 +4886,7 @@ void _wrap_TapAPIQuoteCommodityInfo_CommodityDenominator_set_tap_346fccac5823e4f
 }
 
 
-intgo _wrap_TapAPIQuoteCommodityInfo_CommodityDenominator_get_tap_346fccac5823e4ff(TapAPIQuoteCommodityInfo *_swig_go_0) {
+intgo _wrap_TapAPIQuoteCommodityInfo_CommodityDenominator_get_tap_d0ee4858b481f089(TapAPIQuoteCommodityInfo *_swig_go_0) {
   TapAPIQuoteCommodityInfo *arg1 = (TapAPIQuoteCommodityInfo *) 0 ;
   TAPIINT32 result;
   intgo _swig_go_result;
@@ -4915,7 +4899,7 @@ intgo _wrap_TapAPIQuoteCommodityInfo_CommodityDenominator_get_tap_346fccac5823e4
 }
 
 
-void _wrap_TapAPIQuoteCommodityInfo_CmbDirect_set_tap_346fccac5823e4ff(TapAPIQuoteCommodityInfo *_swig_go_0, char _swig_go_1) {
+void _wrap_TapAPIQuoteCommodityInfo_CmbDirect_set_tap_d0ee4858b481f089(TapAPIQuoteCommodityInfo *_swig_go_0, char _swig_go_1) {
   TapAPIQuoteCommodityInfo *arg1 = (TapAPIQuoteCommodityInfo *) 0 ;
   TAPICHAR arg2 ;
   
@@ -4927,7 +4911,7 @@ void _wrap_TapAPIQuoteCommodityInfo_CmbDirect_set_tap_346fccac5823e4ff(TapAPIQuo
 }
 
 
-char _wrap_TapAPIQuoteCommodityInfo_CmbDirect_get_tap_346fccac5823e4ff(TapAPIQuoteCommodityInfo *_swig_go_0) {
+char _wrap_TapAPIQuoteCommodityInfo_CmbDirect_get_tap_d0ee4858b481f089(TapAPIQuoteCommodityInfo *_swig_go_0) {
   TapAPIQuoteCommodityInfo *arg1 = (TapAPIQuoteCommodityInfo *) 0 ;
   TAPICHAR result;
   char _swig_go_result;
@@ -4940,7 +4924,7 @@ char _wrap_TapAPIQuoteCommodityInfo_CmbDirect_get_tap_346fccac5823e4ff(TapAPIQuo
 }
 
 
-void _wrap_TapAPIQuoteCommodityInfo_CommodityContractLen_set_tap_346fccac5823e4ff(TapAPIQuoteCommodityInfo *_swig_go_0, intgo _swig_go_1) {
+void _wrap_TapAPIQuoteCommodityInfo_CommodityContractLen_set_tap_d0ee4858b481f089(TapAPIQuoteCommodityInfo *_swig_go_0, intgo _swig_go_1) {
   TapAPIQuoteCommodityInfo *arg1 = (TapAPIQuoteCommodityInfo *) 0 ;
   TAPIINT32 arg2 ;
   
@@ -4952,7 +4936,7 @@ void _wrap_TapAPIQuoteCommodityInfo_CommodityContractLen_set_tap_346fccac5823e4f
 }
 
 
-intgo _wrap_TapAPIQuoteCommodityInfo_CommodityContractLen_get_tap_346fccac5823e4ff(TapAPIQuoteCommodityInfo *_swig_go_0) {
+intgo _wrap_TapAPIQuoteCommodityInfo_CommodityContractLen_get_tap_d0ee4858b481f089(TapAPIQuoteCommodityInfo *_swig_go_0) {
   TapAPIQuoteCommodityInfo *arg1 = (TapAPIQuoteCommodityInfo *) 0 ;
   TAPIINT32 result;
   intgo _swig_go_result;
@@ -4965,7 +4949,7 @@ intgo _wrap_TapAPIQuoteCommodityInfo_CommodityContractLen_get_tap_346fccac5823e4
 }
 
 
-void _wrap_TapAPIQuoteCommodityInfo_IsDST_set_tap_346fccac5823e4ff(TapAPIQuoteCommodityInfo *_swig_go_0, char _swig_go_1) {
+void _wrap_TapAPIQuoteCommodityInfo_IsDST_set_tap_d0ee4858b481f089(TapAPIQuoteCommodityInfo *_swig_go_0, char _swig_go_1) {
   TapAPIQuoteCommodityInfo *arg1 = (TapAPIQuoteCommodityInfo *) 0 ;
   TAPIYNFLAG arg2 ;
   
@@ -4977,7 +4961,7 @@ void _wrap_TapAPIQuoteCommodityInfo_IsDST_set_tap_346fccac5823e4ff(TapAPIQuoteCo
 }
 
 
-char _wrap_TapAPIQuoteCommodityInfo_IsDST_get_tap_346fccac5823e4ff(TapAPIQuoteCommodityInfo *_swig_go_0) {
+char _wrap_TapAPIQuoteCommodityInfo_IsDST_get_tap_d0ee4858b481f089(TapAPIQuoteCommodityInfo *_swig_go_0) {
   TapAPIQuoteCommodityInfo *arg1 = (TapAPIQuoteCommodityInfo *) 0 ;
   TAPIYNFLAG result;
   char _swig_go_result;
@@ -4990,7 +4974,7 @@ char _wrap_TapAPIQuoteCommodityInfo_IsDST_get_tap_346fccac5823e4ff(TapAPIQuoteCo
 }
 
 
-void _wrap_TapAPIQuoteCommodityInfo_RelateCommodity1_set_tap_346fccac5823e4ff(TapAPIQuoteCommodityInfo *_swig_go_0, TapAPICommodity *_swig_go_1) {
+void _wrap_TapAPIQuoteCommodityInfo_RelateCommodity1_set_tap_d0ee4858b481f089(TapAPIQuoteCommodityInfo *_swig_go_0, TapAPICommodity *_swig_go_1) {
   TapAPIQuoteCommodityInfo *arg1 = (TapAPIQuoteCommodityInfo *) 0 ;
   TapAPICommodity *arg2 = (TapAPICommodity *) 0 ;
   
@@ -5002,7 +4986,7 @@ void _wrap_TapAPIQuoteCommodityInfo_RelateCommodity1_set_tap_346fccac5823e4ff(Ta
 }
 
 
-TapAPICommodity *_wrap_TapAPIQuoteCommodityInfo_RelateCommodity1_get_tap_346fccac5823e4ff(TapAPIQuoteCommodityInfo *_swig_go_0) {
+TapAPICommodity *_wrap_TapAPIQuoteCommodityInfo_RelateCommodity1_get_tap_d0ee4858b481f089(TapAPIQuoteCommodityInfo *_swig_go_0) {
   TapAPIQuoteCommodityInfo *arg1 = (TapAPIQuoteCommodityInfo *) 0 ;
   TapAPICommodity *result = 0 ;
   TapAPICommodity *_swig_go_result;
@@ -5015,7 +4999,7 @@ TapAPICommodity *_wrap_TapAPIQuoteCommodityInfo_RelateCommodity1_get_tap_346fcca
 }
 
 
-void _wrap_TapAPIQuoteCommodityInfo_RelateCommodity2_set_tap_346fccac5823e4ff(TapAPIQuoteCommodityInfo *_swig_go_0, TapAPICommodity *_swig_go_1) {
+void _wrap_TapAPIQuoteCommodityInfo_RelateCommodity2_set_tap_d0ee4858b481f089(TapAPIQuoteCommodityInfo *_swig_go_0, TapAPICommodity *_swig_go_1) {
   TapAPIQuoteCommodityInfo *arg1 = (TapAPIQuoteCommodityInfo *) 0 ;
   TapAPICommodity *arg2 = (TapAPICommodity *) 0 ;
   
@@ -5027,7 +5011,7 @@ void _wrap_TapAPIQuoteCommodityInfo_RelateCommodity2_set_tap_346fccac5823e4ff(Ta
 }
 
 
-TapAPICommodity *_wrap_TapAPIQuoteCommodityInfo_RelateCommodity2_get_tap_346fccac5823e4ff(TapAPIQuoteCommodityInfo *_swig_go_0) {
+TapAPICommodity *_wrap_TapAPIQuoteCommodityInfo_RelateCommodity2_get_tap_d0ee4858b481f089(TapAPIQuoteCommodityInfo *_swig_go_0) {
   TapAPIQuoteCommodityInfo *arg1 = (TapAPIQuoteCommodityInfo *) 0 ;
   TapAPICommodity *result = 0 ;
   TapAPICommodity *_swig_go_result;
@@ -5040,7 +5024,7 @@ TapAPICommodity *_wrap_TapAPIQuoteCommodityInfo_RelateCommodity2_get_tap_346fcca
 }
 
 
-TapAPIQuoteCommodityInfo *_wrap_new_TapAPIQuoteCommodityInfo_tap_346fccac5823e4ff() {
+TapAPIQuoteCommodityInfo *_wrap_new_TapAPIQuoteCommodityInfo_tap_d0ee4858b481f089() {
   TapAPIQuoteCommodityInfo *result = 0 ;
   TapAPIQuoteCommodityInfo *_swig_go_result;
   
@@ -5051,7 +5035,7 @@ TapAPIQuoteCommodityInfo *_wrap_new_TapAPIQuoteCommodityInfo_tap_346fccac5823e4f
 }
 
 
-void _wrap_delete_TapAPIQuoteCommodityInfo_tap_346fccac5823e4ff(TapAPIQuoteCommodityInfo *_swig_go_0) {
+void _wrap_delete_TapAPIQuoteCommodityInfo_tap_d0ee4858b481f089(TapAPIQuoteCommodityInfo *_swig_go_0) {
   TapAPIQuoteCommodityInfo *arg1 = (TapAPIQuoteCommodityInfo *) 0 ;
   
   arg1 = *(TapAPIQuoteCommodityInfo **)&_swig_go_0; 
@@ -5061,7 +5045,7 @@ void _wrap_delete_TapAPIQuoteCommodityInfo_tap_346fccac5823e4ff(TapAPIQuoteCommo
 }
 
 
-void _wrap_TapAPIQuoteContractInfo_Contract_set_tap_346fccac5823e4ff(TapAPIQuoteContractInfo *_swig_go_0, TapAPIContract *_swig_go_1) {
+void _wrap_TapAPIQuoteContractInfo_Contract_set_tap_d0ee4858b481f089(TapAPIQuoteContractInfo *_swig_go_0, TapAPIContract *_swig_go_1) {
   TapAPIQuoteContractInfo *arg1 = (TapAPIQuoteContractInfo *) 0 ;
   TapAPIContract *arg2 = (TapAPIContract *) 0 ;
   
@@ -5073,7 +5057,7 @@ void _wrap_TapAPIQuoteContractInfo_Contract_set_tap_346fccac5823e4ff(TapAPIQuote
 }
 
 
-TapAPIContract *_wrap_TapAPIQuoteContractInfo_Contract_get_tap_346fccac5823e4ff(TapAPIQuoteContractInfo *_swig_go_0) {
+TapAPIContract *_wrap_TapAPIQuoteContractInfo_Contract_get_tap_d0ee4858b481f089(TapAPIQuoteContractInfo *_swig_go_0) {
   TapAPIQuoteContractInfo *arg1 = (TapAPIQuoteContractInfo *) 0 ;
   TapAPIContract *result = 0 ;
   TapAPIContract *_swig_go_result;
@@ -5086,7 +5070,7 @@ TapAPIContract *_wrap_TapAPIQuoteContractInfo_Contract_get_tap_346fccac5823e4ff(
 }
 
 
-void _wrap_TapAPIQuoteContractInfo_ContractType_set_tap_346fccac5823e4ff(TapAPIQuoteContractInfo *_swig_go_0, char _swig_go_1) {
+void _wrap_TapAPIQuoteContractInfo_ContractType_set_tap_d0ee4858b481f089(TapAPIQuoteContractInfo *_swig_go_0, char _swig_go_1) {
   TapAPIQuoteContractInfo *arg1 = (TapAPIQuoteContractInfo *) 0 ;
   TAPICHAR arg2 ;
   
@@ -5098,7 +5082,7 @@ void _wrap_TapAPIQuoteContractInfo_ContractType_set_tap_346fccac5823e4ff(TapAPIQ
 }
 
 
-char _wrap_TapAPIQuoteContractInfo_ContractType_get_tap_346fccac5823e4ff(TapAPIQuoteContractInfo *_swig_go_0) {
+char _wrap_TapAPIQuoteContractInfo_ContractType_get_tap_d0ee4858b481f089(TapAPIQuoteContractInfo *_swig_go_0) {
   TapAPIQuoteContractInfo *arg1 = (TapAPIQuoteContractInfo *) 0 ;
   TAPICHAR result;
   char _swig_go_result;
@@ -5111,7 +5095,7 @@ char _wrap_TapAPIQuoteContractInfo_ContractType_get_tap_346fccac5823e4ff(TapAPIQ
 }
 
 
-void _wrap_TapAPIQuoteContractInfo_QuoteUnderlyingContract_set_tap_346fccac5823e4ff(TapAPIQuoteContractInfo *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPIQuoteContractInfo_QuoteUnderlyingContract_set_tap_d0ee4858b481f089(TapAPIQuoteContractInfo *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPIQuoteContractInfo *arg1 = (TapAPIQuoteContractInfo *) 0 ;
   char *arg2 ;
   
@@ -5135,7 +5119,7 @@ void _wrap_TapAPIQuoteContractInfo_QuoteUnderlyingContract_set_tap_346fccac5823e
 }
 
 
-_gostring_ _wrap_TapAPIQuoteContractInfo_QuoteUnderlyingContract_get_tap_346fccac5823e4ff(TapAPIQuoteContractInfo *_swig_go_0) {
+_gostring_ _wrap_TapAPIQuoteContractInfo_QuoteUnderlyingContract_get_tap_d0ee4858b481f089(TapAPIQuoteContractInfo *_swig_go_0) {
   TapAPIQuoteContractInfo *arg1 = (TapAPIQuoteContractInfo *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -5148,7 +5132,7 @@ _gostring_ _wrap_TapAPIQuoteContractInfo_QuoteUnderlyingContract_get_tap_346fcca
 }
 
 
-void _wrap_TapAPIQuoteContractInfo_ContractName_set_tap_346fccac5823e4ff(TapAPIQuoteContractInfo *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPIQuoteContractInfo_ContractName_set_tap_d0ee4858b481f089(TapAPIQuoteContractInfo *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPIQuoteContractInfo *arg1 = (TapAPIQuoteContractInfo *) 0 ;
   char *arg2 ;
   
@@ -5172,7 +5156,7 @@ void _wrap_TapAPIQuoteContractInfo_ContractName_set_tap_346fccac5823e4ff(TapAPIQ
 }
 
 
-_gostring_ _wrap_TapAPIQuoteContractInfo_ContractName_get_tap_346fccac5823e4ff(TapAPIQuoteContractInfo *_swig_go_0) {
+_gostring_ _wrap_TapAPIQuoteContractInfo_ContractName_get_tap_d0ee4858b481f089(TapAPIQuoteContractInfo *_swig_go_0) {
   TapAPIQuoteContractInfo *arg1 = (TapAPIQuoteContractInfo *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -5185,7 +5169,7 @@ _gostring_ _wrap_TapAPIQuoteContractInfo_ContractName_get_tap_346fccac5823e4ff(T
 }
 
 
-void _wrap_TapAPIQuoteContractInfo_ContractExpDate_set_tap_346fccac5823e4ff(TapAPIQuoteContractInfo *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPIQuoteContractInfo_ContractExpDate_set_tap_d0ee4858b481f089(TapAPIQuoteContractInfo *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPIQuoteContractInfo *arg1 = (TapAPIQuoteContractInfo *) 0 ;
   char *arg2 ;
   
@@ -5209,7 +5193,7 @@ void _wrap_TapAPIQuoteContractInfo_ContractExpDate_set_tap_346fccac5823e4ff(TapA
 }
 
 
-_gostring_ _wrap_TapAPIQuoteContractInfo_ContractExpDate_get_tap_346fccac5823e4ff(TapAPIQuoteContractInfo *_swig_go_0) {
+_gostring_ _wrap_TapAPIQuoteContractInfo_ContractExpDate_get_tap_d0ee4858b481f089(TapAPIQuoteContractInfo *_swig_go_0) {
   TapAPIQuoteContractInfo *arg1 = (TapAPIQuoteContractInfo *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -5222,7 +5206,7 @@ _gostring_ _wrap_TapAPIQuoteContractInfo_ContractExpDate_get_tap_346fccac5823e4f
 }
 
 
-void _wrap_TapAPIQuoteContractInfo_LastTradeDate_set_tap_346fccac5823e4ff(TapAPIQuoteContractInfo *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPIQuoteContractInfo_LastTradeDate_set_tap_d0ee4858b481f089(TapAPIQuoteContractInfo *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPIQuoteContractInfo *arg1 = (TapAPIQuoteContractInfo *) 0 ;
   char *arg2 ;
   
@@ -5246,7 +5230,7 @@ void _wrap_TapAPIQuoteContractInfo_LastTradeDate_set_tap_346fccac5823e4ff(TapAPI
 }
 
 
-_gostring_ _wrap_TapAPIQuoteContractInfo_LastTradeDate_get_tap_346fccac5823e4ff(TapAPIQuoteContractInfo *_swig_go_0) {
+_gostring_ _wrap_TapAPIQuoteContractInfo_LastTradeDate_get_tap_d0ee4858b481f089(TapAPIQuoteContractInfo *_swig_go_0) {
   TapAPIQuoteContractInfo *arg1 = (TapAPIQuoteContractInfo *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -5259,7 +5243,7 @@ _gostring_ _wrap_TapAPIQuoteContractInfo_LastTradeDate_get_tap_346fccac5823e4ff(
 }
 
 
-void _wrap_TapAPIQuoteContractInfo_FirstNoticeDate_set_tap_346fccac5823e4ff(TapAPIQuoteContractInfo *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPIQuoteContractInfo_FirstNoticeDate_set_tap_d0ee4858b481f089(TapAPIQuoteContractInfo *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPIQuoteContractInfo *arg1 = (TapAPIQuoteContractInfo *) 0 ;
   char *arg2 ;
   
@@ -5283,7 +5267,7 @@ void _wrap_TapAPIQuoteContractInfo_FirstNoticeDate_set_tap_346fccac5823e4ff(TapA
 }
 
 
-_gostring_ _wrap_TapAPIQuoteContractInfo_FirstNoticeDate_get_tap_346fccac5823e4ff(TapAPIQuoteContractInfo *_swig_go_0) {
+_gostring_ _wrap_TapAPIQuoteContractInfo_FirstNoticeDate_get_tap_d0ee4858b481f089(TapAPIQuoteContractInfo *_swig_go_0) {
   TapAPIQuoteContractInfo *arg1 = (TapAPIQuoteContractInfo *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -5296,7 +5280,7 @@ _gostring_ _wrap_TapAPIQuoteContractInfo_FirstNoticeDate_get_tap_346fccac5823e4f
 }
 
 
-TapAPIQuoteContractInfo *_wrap_new_TapAPIQuoteContractInfo_tap_346fccac5823e4ff() {
+TapAPIQuoteContractInfo *_wrap_new_TapAPIQuoteContractInfo_tap_d0ee4858b481f089() {
   TapAPIQuoteContractInfo *result = 0 ;
   TapAPIQuoteContractInfo *_swig_go_result;
   
@@ -5307,7 +5291,7 @@ TapAPIQuoteContractInfo *_wrap_new_TapAPIQuoteContractInfo_tap_346fccac5823e4ff(
 }
 
 
-void _wrap_delete_TapAPIQuoteContractInfo_tap_346fccac5823e4ff(TapAPIQuoteContractInfo *_swig_go_0) {
+void _wrap_delete_TapAPIQuoteContractInfo_tap_d0ee4858b481f089(TapAPIQuoteContractInfo *_swig_go_0) {
   TapAPIQuoteContractInfo *arg1 = (TapAPIQuoteContractInfo *) 0 ;
   
   arg1 = *(TapAPIQuoteContractInfo **)&_swig_go_0; 
@@ -5317,7 +5301,7 @@ void _wrap_delete_TapAPIQuoteContractInfo_tap_346fccac5823e4ff(TapAPIQuoteContra
 }
 
 
-void _wrap_TapAPIQuoteWhole_Contract_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, TapAPIContract *_swig_go_1) {
+void _wrap_TapAPIQuoteWhole_Contract_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, TapAPIContract *_swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TapAPIContract *arg2 = (TapAPIContract *) 0 ;
   
@@ -5329,7 +5313,7 @@ void _wrap_TapAPIQuoteWhole_Contract_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *
 }
 
 
-TapAPIContract *_wrap_TapAPIQuoteWhole_Contract_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+TapAPIContract *_wrap_TapAPIQuoteWhole_Contract_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TapAPIContract *result = 0 ;
   TapAPIContract *_swig_go_result;
@@ -5342,7 +5326,7 @@ TapAPIContract *_wrap_TapAPIQuoteWhole_Contract_get_tap_346fccac5823e4ff(TapAPIQ
 }
 
 
-void _wrap_TapAPIQuoteWhole_CurrencyNo_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_CurrencyNo_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   char *arg2 ;
   
@@ -5366,7 +5350,7 @@ void _wrap_TapAPIQuoteWhole_CurrencyNo_set_tap_346fccac5823e4ff(TapAPIQuoteWhole
 }
 
 
-_gostring_ _wrap_TapAPIQuoteWhole_CurrencyNo_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+_gostring_ _wrap_TapAPIQuoteWhole_CurrencyNo_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -5379,7 +5363,7 @@ _gostring_ _wrap_TapAPIQuoteWhole_CurrencyNo_get_tap_346fccac5823e4ff(TapAPIQuot
 }
 
 
-void _wrap_TapAPIQuoteWhole_TradingState_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, char _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_TradingState_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, char _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPICHAR arg2 ;
   
@@ -5391,7 +5375,7 @@ void _wrap_TapAPIQuoteWhole_TradingState_set_tap_346fccac5823e4ff(TapAPIQuoteWho
 }
 
 
-char _wrap_TapAPIQuoteWhole_TradingState_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+char _wrap_TapAPIQuoteWhole_TradingState_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPICHAR result;
   char _swig_go_result;
@@ -5404,7 +5388,7 @@ char _wrap_TapAPIQuoteWhole_TradingState_get_tap_346fccac5823e4ff(TapAPIQuoteWho
 }
 
 
-void _wrap_TapAPIQuoteWhole_DateTimeStamp_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, _gostring_ _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_DateTimeStamp_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, _gostring_ _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   char *arg2 ;
   
@@ -5428,7 +5412,7 @@ void _wrap_TapAPIQuoteWhole_DateTimeStamp_set_tap_346fccac5823e4ff(TapAPIQuoteWh
 }
 
 
-_gostring_ _wrap_TapAPIQuoteWhole_DateTimeStamp_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+_gostring_ _wrap_TapAPIQuoteWhole_DateTimeStamp_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   char *result = 0 ;
   _gostring_ _swig_go_result;
@@ -5441,7 +5425,7 @@ _gostring_ _wrap_TapAPIQuoteWhole_DateTimeStamp_get_tap_346fccac5823e4ff(TapAPIQ
 }
 
 
-void _wrap_TapAPIQuoteWhole_QPreClosingPrice_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QPreClosingPrice_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE arg2 ;
   
@@ -5453,7 +5437,7 @@ void _wrap_TapAPIQuoteWhole_QPreClosingPrice_set_tap_346fccac5823e4ff(TapAPIQuot
 }
 
 
-double _wrap_TapAPIQuoteWhole_QPreClosingPrice_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+double _wrap_TapAPIQuoteWhole_QPreClosingPrice_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE result;
   double _swig_go_result;
@@ -5466,7 +5450,7 @@ double _wrap_TapAPIQuoteWhole_QPreClosingPrice_get_tap_346fccac5823e4ff(TapAPIQu
 }
 
 
-void _wrap_TapAPIQuoteWhole_QPreSettlePrice_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QPreSettlePrice_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE arg2 ;
   
@@ -5478,7 +5462,7 @@ void _wrap_TapAPIQuoteWhole_QPreSettlePrice_set_tap_346fccac5823e4ff(TapAPIQuote
 }
 
 
-double _wrap_TapAPIQuoteWhole_QPreSettlePrice_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+double _wrap_TapAPIQuoteWhole_QPreSettlePrice_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE result;
   double _swig_go_result;
@@ -5491,7 +5475,7 @@ double _wrap_TapAPIQuoteWhole_QPreSettlePrice_get_tap_346fccac5823e4ff(TapAPIQuo
 }
 
 
-void _wrap_TapAPIQuoteWhole_QPrePositionQty_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, long long _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QPrePositionQty_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, long long _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQVOLUME arg2 ;
   
@@ -5503,7 +5487,7 @@ void _wrap_TapAPIQuoteWhole_QPrePositionQty_set_tap_346fccac5823e4ff(TapAPIQuote
 }
 
 
-long long _wrap_TapAPIQuoteWhole_QPrePositionQty_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+long long _wrap_TapAPIQuoteWhole_QPrePositionQty_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQVOLUME result;
   long long _swig_go_result;
@@ -5516,7 +5500,7 @@ long long _wrap_TapAPIQuoteWhole_QPrePositionQty_get_tap_346fccac5823e4ff(TapAPI
 }
 
 
-void _wrap_TapAPIQuoteWhole_QOpeningPrice_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QOpeningPrice_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE arg2 ;
   
@@ -5528,7 +5512,7 @@ void _wrap_TapAPIQuoteWhole_QOpeningPrice_set_tap_346fccac5823e4ff(TapAPIQuoteWh
 }
 
 
-double _wrap_TapAPIQuoteWhole_QOpeningPrice_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+double _wrap_TapAPIQuoteWhole_QOpeningPrice_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE result;
   double _swig_go_result;
@@ -5541,7 +5525,7 @@ double _wrap_TapAPIQuoteWhole_QOpeningPrice_get_tap_346fccac5823e4ff(TapAPIQuote
 }
 
 
-void _wrap_TapAPIQuoteWhole_QLastPrice_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QLastPrice_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE arg2 ;
   
@@ -5553,7 +5537,7 @@ void _wrap_TapAPIQuoteWhole_QLastPrice_set_tap_346fccac5823e4ff(TapAPIQuoteWhole
 }
 
 
-double _wrap_TapAPIQuoteWhole_QLastPrice_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+double _wrap_TapAPIQuoteWhole_QLastPrice_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE result;
   double _swig_go_result;
@@ -5566,7 +5550,7 @@ double _wrap_TapAPIQuoteWhole_QLastPrice_get_tap_346fccac5823e4ff(TapAPIQuoteWho
 }
 
 
-void _wrap_TapAPIQuoteWhole_QHighPrice_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QHighPrice_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE arg2 ;
   
@@ -5578,7 +5562,7 @@ void _wrap_TapAPIQuoteWhole_QHighPrice_set_tap_346fccac5823e4ff(TapAPIQuoteWhole
 }
 
 
-double _wrap_TapAPIQuoteWhole_QHighPrice_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+double _wrap_TapAPIQuoteWhole_QHighPrice_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE result;
   double _swig_go_result;
@@ -5591,7 +5575,7 @@ double _wrap_TapAPIQuoteWhole_QHighPrice_get_tap_346fccac5823e4ff(TapAPIQuoteWho
 }
 
 
-void _wrap_TapAPIQuoteWhole_QLowPrice_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QLowPrice_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE arg2 ;
   
@@ -5603,7 +5587,7 @@ void _wrap_TapAPIQuoteWhole_QLowPrice_set_tap_346fccac5823e4ff(TapAPIQuoteWhole 
 }
 
 
-double _wrap_TapAPIQuoteWhole_QLowPrice_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+double _wrap_TapAPIQuoteWhole_QLowPrice_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE result;
   double _swig_go_result;
@@ -5616,7 +5600,7 @@ double _wrap_TapAPIQuoteWhole_QLowPrice_get_tap_346fccac5823e4ff(TapAPIQuoteWhol
 }
 
 
-void _wrap_TapAPIQuoteWhole_QHisHighPrice_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QHisHighPrice_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE arg2 ;
   
@@ -5628,7 +5612,7 @@ void _wrap_TapAPIQuoteWhole_QHisHighPrice_set_tap_346fccac5823e4ff(TapAPIQuoteWh
 }
 
 
-double _wrap_TapAPIQuoteWhole_QHisHighPrice_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+double _wrap_TapAPIQuoteWhole_QHisHighPrice_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE result;
   double _swig_go_result;
@@ -5641,7 +5625,7 @@ double _wrap_TapAPIQuoteWhole_QHisHighPrice_get_tap_346fccac5823e4ff(TapAPIQuote
 }
 
 
-void _wrap_TapAPIQuoteWhole_QHisLowPrice_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QHisLowPrice_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE arg2 ;
   
@@ -5653,7 +5637,7 @@ void _wrap_TapAPIQuoteWhole_QHisLowPrice_set_tap_346fccac5823e4ff(TapAPIQuoteWho
 }
 
 
-double _wrap_TapAPIQuoteWhole_QHisLowPrice_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+double _wrap_TapAPIQuoteWhole_QHisLowPrice_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE result;
   double _swig_go_result;
@@ -5666,7 +5650,7 @@ double _wrap_TapAPIQuoteWhole_QHisLowPrice_get_tap_346fccac5823e4ff(TapAPIQuoteW
 }
 
 
-void _wrap_TapAPIQuoteWhole_QLimitUpPrice_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QLimitUpPrice_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE arg2 ;
   
@@ -5678,7 +5662,7 @@ void _wrap_TapAPIQuoteWhole_QLimitUpPrice_set_tap_346fccac5823e4ff(TapAPIQuoteWh
 }
 
 
-double _wrap_TapAPIQuoteWhole_QLimitUpPrice_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+double _wrap_TapAPIQuoteWhole_QLimitUpPrice_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE result;
   double _swig_go_result;
@@ -5691,7 +5675,7 @@ double _wrap_TapAPIQuoteWhole_QLimitUpPrice_get_tap_346fccac5823e4ff(TapAPIQuote
 }
 
 
-void _wrap_TapAPIQuoteWhole_QLimitDownPrice_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QLimitDownPrice_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE arg2 ;
   
@@ -5703,7 +5687,7 @@ void _wrap_TapAPIQuoteWhole_QLimitDownPrice_set_tap_346fccac5823e4ff(TapAPIQuote
 }
 
 
-double _wrap_TapAPIQuoteWhole_QLimitDownPrice_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+double _wrap_TapAPIQuoteWhole_QLimitDownPrice_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE result;
   double _swig_go_result;
@@ -5716,7 +5700,7 @@ double _wrap_TapAPIQuoteWhole_QLimitDownPrice_get_tap_346fccac5823e4ff(TapAPIQuo
 }
 
 
-void _wrap_TapAPIQuoteWhole_QTotalQty_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, long long _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QTotalQty_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, long long _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQVOLUME arg2 ;
   
@@ -5728,7 +5712,7 @@ void _wrap_TapAPIQuoteWhole_QTotalQty_set_tap_346fccac5823e4ff(TapAPIQuoteWhole 
 }
 
 
-long long _wrap_TapAPIQuoteWhole_QTotalQty_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+long long _wrap_TapAPIQuoteWhole_QTotalQty_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQVOLUME result;
   long long _swig_go_result;
@@ -5741,7 +5725,7 @@ long long _wrap_TapAPIQuoteWhole_QTotalQty_get_tap_346fccac5823e4ff(TapAPIQuoteW
 }
 
 
-void _wrap_TapAPIQuoteWhole_QTotalTurnover_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QTotalTurnover_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE arg2 ;
   
@@ -5753,7 +5737,7 @@ void _wrap_TapAPIQuoteWhole_QTotalTurnover_set_tap_346fccac5823e4ff(TapAPIQuoteW
 }
 
 
-double _wrap_TapAPIQuoteWhole_QTotalTurnover_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+double _wrap_TapAPIQuoteWhole_QTotalTurnover_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE result;
   double _swig_go_result;
@@ -5766,7 +5750,7 @@ double _wrap_TapAPIQuoteWhole_QTotalTurnover_get_tap_346fccac5823e4ff(TapAPIQuot
 }
 
 
-void _wrap_TapAPIQuoteWhole_QPositionQty_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, long long _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QPositionQty_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, long long _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQVOLUME arg2 ;
   
@@ -5778,7 +5762,7 @@ void _wrap_TapAPIQuoteWhole_QPositionQty_set_tap_346fccac5823e4ff(TapAPIQuoteWho
 }
 
 
-long long _wrap_TapAPIQuoteWhole_QPositionQty_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+long long _wrap_TapAPIQuoteWhole_QPositionQty_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQVOLUME result;
   long long _swig_go_result;
@@ -5791,7 +5775,7 @@ long long _wrap_TapAPIQuoteWhole_QPositionQty_get_tap_346fccac5823e4ff(TapAPIQuo
 }
 
 
-void _wrap_TapAPIQuoteWhole_QAveragePrice_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QAveragePrice_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE arg2 ;
   
@@ -5803,7 +5787,7 @@ void _wrap_TapAPIQuoteWhole_QAveragePrice_set_tap_346fccac5823e4ff(TapAPIQuoteWh
 }
 
 
-double _wrap_TapAPIQuoteWhole_QAveragePrice_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+double _wrap_TapAPIQuoteWhole_QAveragePrice_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE result;
   double _swig_go_result;
@@ -5816,7 +5800,7 @@ double _wrap_TapAPIQuoteWhole_QAveragePrice_get_tap_346fccac5823e4ff(TapAPIQuote
 }
 
 
-void _wrap_TapAPIQuoteWhole_QClosingPrice_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QClosingPrice_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE arg2 ;
   
@@ -5828,7 +5812,7 @@ void _wrap_TapAPIQuoteWhole_QClosingPrice_set_tap_346fccac5823e4ff(TapAPIQuoteWh
 }
 
 
-double _wrap_TapAPIQuoteWhole_QClosingPrice_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+double _wrap_TapAPIQuoteWhole_QClosingPrice_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE result;
   double _swig_go_result;
@@ -5841,7 +5825,7 @@ double _wrap_TapAPIQuoteWhole_QClosingPrice_get_tap_346fccac5823e4ff(TapAPIQuote
 }
 
 
-void _wrap_TapAPIQuoteWhole_QSettlePrice_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QSettlePrice_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE arg2 ;
   
@@ -5853,7 +5837,7 @@ void _wrap_TapAPIQuoteWhole_QSettlePrice_set_tap_346fccac5823e4ff(TapAPIQuoteWho
 }
 
 
-double _wrap_TapAPIQuoteWhole_QSettlePrice_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+double _wrap_TapAPIQuoteWhole_QSettlePrice_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE result;
   double _swig_go_result;
@@ -5866,7 +5850,7 @@ double _wrap_TapAPIQuoteWhole_QSettlePrice_get_tap_346fccac5823e4ff(TapAPIQuoteW
 }
 
 
-void _wrap_TapAPIQuoteWhole_QLastQty_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, long long _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QLastQty_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, long long _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQVOLUME arg2 ;
   
@@ -5878,7 +5862,7 @@ void _wrap_TapAPIQuoteWhole_QLastQty_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *
 }
 
 
-long long _wrap_TapAPIQuoteWhole_QLastQty_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+long long _wrap_TapAPIQuoteWhole_QLastQty_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQVOLUME result;
   long long _swig_go_result;
@@ -5891,7 +5875,7 @@ long long _wrap_TapAPIQuoteWhole_QLastQty_get_tap_346fccac5823e4ff(TapAPIQuoteWh
 }
 
 
-void _wrap_TapAPIQuoteWhole_QBidPrice_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, double *_swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QBidPrice_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, double *_swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE *arg2 ;
   
@@ -5907,7 +5891,7 @@ void _wrap_TapAPIQuoteWhole_QBidPrice_set_tap_346fccac5823e4ff(TapAPIQuoteWhole 
 }
 
 
-double *_wrap_TapAPIQuoteWhole_QBidPrice_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+double *_wrap_TapAPIQuoteWhole_QBidPrice_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE *result = 0 ;
   double *_swig_go_result;
@@ -5920,7 +5904,7 @@ double *_wrap_TapAPIQuoteWhole_QBidPrice_get_tap_346fccac5823e4ff(TapAPIQuoteWho
 }
 
 
-void _wrap_TapAPIQuoteWhole_QBidQty_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, long long *_swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QBidQty_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, long long *_swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQVOLUME *arg2 ;
   
@@ -5936,7 +5920,7 @@ void _wrap_TapAPIQuoteWhole_QBidQty_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_
 }
 
 
-long long *_wrap_TapAPIQuoteWhole_QBidQty_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+long long *_wrap_TapAPIQuoteWhole_QBidQty_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQVOLUME *result = 0 ;
   long long *_swig_go_result;
@@ -5949,7 +5933,7 @@ long long *_wrap_TapAPIQuoteWhole_QBidQty_get_tap_346fccac5823e4ff(TapAPIQuoteWh
 }
 
 
-void _wrap_TapAPIQuoteWhole_QAskPrice_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, double *_swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QAskPrice_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, double *_swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE *arg2 ;
   
@@ -5965,7 +5949,7 @@ void _wrap_TapAPIQuoteWhole_QAskPrice_set_tap_346fccac5823e4ff(TapAPIQuoteWhole 
 }
 
 
-double *_wrap_TapAPIQuoteWhole_QAskPrice_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+double *_wrap_TapAPIQuoteWhole_QAskPrice_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE *result = 0 ;
   double *_swig_go_result;
@@ -5978,7 +5962,7 @@ double *_wrap_TapAPIQuoteWhole_QAskPrice_get_tap_346fccac5823e4ff(TapAPIQuoteWho
 }
 
 
-void _wrap_TapAPIQuoteWhole_QAskQty_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, long long *_swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QAskQty_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, long long *_swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQVOLUME *arg2 ;
   
@@ -5994,7 +5978,7 @@ void _wrap_TapAPIQuoteWhole_QAskQty_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_
 }
 
 
-long long *_wrap_TapAPIQuoteWhole_QAskQty_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+long long *_wrap_TapAPIQuoteWhole_QAskQty_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQVOLUME *result = 0 ;
   long long *_swig_go_result;
@@ -6007,7 +5991,7 @@ long long *_wrap_TapAPIQuoteWhole_QAskQty_get_tap_346fccac5823e4ff(TapAPIQuoteWh
 }
 
 
-void _wrap_TapAPIQuoteWhole_QImpliedBidPrice_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QImpliedBidPrice_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE arg2 ;
   
@@ -6019,7 +6003,7 @@ void _wrap_TapAPIQuoteWhole_QImpliedBidPrice_set_tap_346fccac5823e4ff(TapAPIQuot
 }
 
 
-double _wrap_TapAPIQuoteWhole_QImpliedBidPrice_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+double _wrap_TapAPIQuoteWhole_QImpliedBidPrice_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE result;
   double _swig_go_result;
@@ -6032,7 +6016,7 @@ double _wrap_TapAPIQuoteWhole_QImpliedBidPrice_get_tap_346fccac5823e4ff(TapAPIQu
 }
 
 
-void _wrap_TapAPIQuoteWhole_QImpliedBidQty_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, long long _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QImpliedBidQty_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, long long _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQVOLUME arg2 ;
   
@@ -6044,7 +6028,7 @@ void _wrap_TapAPIQuoteWhole_QImpliedBidQty_set_tap_346fccac5823e4ff(TapAPIQuoteW
 }
 
 
-long long _wrap_TapAPIQuoteWhole_QImpliedBidQty_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+long long _wrap_TapAPIQuoteWhole_QImpliedBidQty_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQVOLUME result;
   long long _swig_go_result;
@@ -6057,7 +6041,7 @@ long long _wrap_TapAPIQuoteWhole_QImpliedBidQty_get_tap_346fccac5823e4ff(TapAPIQ
 }
 
 
-void _wrap_TapAPIQuoteWhole_QImpliedAskPrice_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QImpliedAskPrice_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE arg2 ;
   
@@ -6069,7 +6053,7 @@ void _wrap_TapAPIQuoteWhole_QImpliedAskPrice_set_tap_346fccac5823e4ff(TapAPIQuot
 }
 
 
-double _wrap_TapAPIQuoteWhole_QImpliedAskPrice_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+double _wrap_TapAPIQuoteWhole_QImpliedAskPrice_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE result;
   double _swig_go_result;
@@ -6082,7 +6066,7 @@ double _wrap_TapAPIQuoteWhole_QImpliedAskPrice_get_tap_346fccac5823e4ff(TapAPIQu
 }
 
 
-void _wrap_TapAPIQuoteWhole_QImpliedAskQty_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, long long _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QImpliedAskQty_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, long long _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQVOLUME arg2 ;
   
@@ -6094,7 +6078,7 @@ void _wrap_TapAPIQuoteWhole_QImpliedAskQty_set_tap_346fccac5823e4ff(TapAPIQuoteW
 }
 
 
-long long _wrap_TapAPIQuoteWhole_QImpliedAskQty_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+long long _wrap_TapAPIQuoteWhole_QImpliedAskQty_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQVOLUME result;
   long long _swig_go_result;
@@ -6107,7 +6091,7 @@ long long _wrap_TapAPIQuoteWhole_QImpliedAskQty_get_tap_346fccac5823e4ff(TapAPIQ
 }
 
 
-void _wrap_TapAPIQuoteWhole_QPreDelta_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QPreDelta_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE arg2 ;
   
@@ -6119,7 +6103,7 @@ void _wrap_TapAPIQuoteWhole_QPreDelta_set_tap_346fccac5823e4ff(TapAPIQuoteWhole 
 }
 
 
-double _wrap_TapAPIQuoteWhole_QPreDelta_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+double _wrap_TapAPIQuoteWhole_QPreDelta_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE result;
   double _swig_go_result;
@@ -6132,7 +6116,7 @@ double _wrap_TapAPIQuoteWhole_QPreDelta_get_tap_346fccac5823e4ff(TapAPIQuoteWhol
 }
 
 
-void _wrap_TapAPIQuoteWhole_QCurrDelta_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QCurrDelta_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE arg2 ;
   
@@ -6144,7 +6128,7 @@ void _wrap_TapAPIQuoteWhole_QCurrDelta_set_tap_346fccac5823e4ff(TapAPIQuoteWhole
 }
 
 
-double _wrap_TapAPIQuoteWhole_QCurrDelta_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+double _wrap_TapAPIQuoteWhole_QCurrDelta_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE result;
   double _swig_go_result;
@@ -6157,7 +6141,7 @@ double _wrap_TapAPIQuoteWhole_QCurrDelta_get_tap_346fccac5823e4ff(TapAPIQuoteWho
 }
 
 
-void _wrap_TapAPIQuoteWhole_QInsideQty_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, long long _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QInsideQty_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, long long _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQVOLUME arg2 ;
   
@@ -6169,7 +6153,7 @@ void _wrap_TapAPIQuoteWhole_QInsideQty_set_tap_346fccac5823e4ff(TapAPIQuoteWhole
 }
 
 
-long long _wrap_TapAPIQuoteWhole_QInsideQty_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+long long _wrap_TapAPIQuoteWhole_QInsideQty_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQVOLUME result;
   long long _swig_go_result;
@@ -6182,7 +6166,7 @@ long long _wrap_TapAPIQuoteWhole_QInsideQty_get_tap_346fccac5823e4ff(TapAPIQuote
 }
 
 
-void _wrap_TapAPIQuoteWhole_QOutsideQty_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, long long _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QOutsideQty_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, long long _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQVOLUME arg2 ;
   
@@ -6194,7 +6178,7 @@ void _wrap_TapAPIQuoteWhole_QOutsideQty_set_tap_346fccac5823e4ff(TapAPIQuoteWhol
 }
 
 
-long long _wrap_TapAPIQuoteWhole_QOutsideQty_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+long long _wrap_TapAPIQuoteWhole_QOutsideQty_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQVOLUME result;
   long long _swig_go_result;
@@ -6207,7 +6191,7 @@ long long _wrap_TapAPIQuoteWhole_QOutsideQty_get_tap_346fccac5823e4ff(TapAPIQuot
 }
 
 
-void _wrap_TapAPIQuoteWhole_QTurnoverRate_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QTurnoverRate_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE arg2 ;
   
@@ -6219,7 +6203,7 @@ void _wrap_TapAPIQuoteWhole_QTurnoverRate_set_tap_346fccac5823e4ff(TapAPIQuoteWh
 }
 
 
-double _wrap_TapAPIQuoteWhole_QTurnoverRate_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+double _wrap_TapAPIQuoteWhole_QTurnoverRate_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE result;
   double _swig_go_result;
@@ -6232,7 +6216,7 @@ double _wrap_TapAPIQuoteWhole_QTurnoverRate_get_tap_346fccac5823e4ff(TapAPIQuote
 }
 
 
-void _wrap_TapAPIQuoteWhole_Q5DAvgQty_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, long long _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_Q5DAvgQty_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, long long _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQVOLUME arg2 ;
   
@@ -6244,7 +6228,7 @@ void _wrap_TapAPIQuoteWhole_Q5DAvgQty_set_tap_346fccac5823e4ff(TapAPIQuoteWhole 
 }
 
 
-long long _wrap_TapAPIQuoteWhole_Q5DAvgQty_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+long long _wrap_TapAPIQuoteWhole_Q5DAvgQty_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQVOLUME result;
   long long _swig_go_result;
@@ -6257,7 +6241,7 @@ long long _wrap_TapAPIQuoteWhole_Q5DAvgQty_get_tap_346fccac5823e4ff(TapAPIQuoteW
 }
 
 
-void _wrap_TapAPIQuoteWhole_QPERatio_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QPERatio_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE arg2 ;
   
@@ -6269,7 +6253,7 @@ void _wrap_TapAPIQuoteWhole_QPERatio_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *
 }
 
 
-double _wrap_TapAPIQuoteWhole_QPERatio_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+double _wrap_TapAPIQuoteWhole_QPERatio_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE result;
   double _swig_go_result;
@@ -6282,7 +6266,7 @@ double _wrap_TapAPIQuoteWhole_QPERatio_get_tap_346fccac5823e4ff(TapAPIQuoteWhole
 }
 
 
-void _wrap_TapAPIQuoteWhole_QTotalValue_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QTotalValue_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE arg2 ;
   
@@ -6294,7 +6278,7 @@ void _wrap_TapAPIQuoteWhole_QTotalValue_set_tap_346fccac5823e4ff(TapAPIQuoteWhol
 }
 
 
-double _wrap_TapAPIQuoteWhole_QTotalValue_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+double _wrap_TapAPIQuoteWhole_QTotalValue_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE result;
   double _swig_go_result;
@@ -6307,7 +6291,7 @@ double _wrap_TapAPIQuoteWhole_QTotalValue_get_tap_346fccac5823e4ff(TapAPIQuoteWh
 }
 
 
-void _wrap_TapAPIQuoteWhole_QNegotiableValue_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QNegotiableValue_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE arg2 ;
   
@@ -6319,7 +6303,7 @@ void _wrap_TapAPIQuoteWhole_QNegotiableValue_set_tap_346fccac5823e4ff(TapAPIQuot
 }
 
 
-double _wrap_TapAPIQuoteWhole_QNegotiableValue_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+double _wrap_TapAPIQuoteWhole_QNegotiableValue_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE result;
   double _swig_go_result;
@@ -6332,7 +6316,7 @@ double _wrap_TapAPIQuoteWhole_QNegotiableValue_get_tap_346fccac5823e4ff(TapAPIQu
 }
 
 
-void _wrap_TapAPIQuoteWhole_QPositionTrend_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, long long _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QPositionTrend_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, long long _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQDIFF arg2 ;
   
@@ -6344,7 +6328,7 @@ void _wrap_TapAPIQuoteWhole_QPositionTrend_set_tap_346fccac5823e4ff(TapAPIQuoteW
 }
 
 
-long long _wrap_TapAPIQuoteWhole_QPositionTrend_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+long long _wrap_TapAPIQuoteWhole_QPositionTrend_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQDIFF result;
   long long _swig_go_result;
@@ -6357,7 +6341,7 @@ long long _wrap_TapAPIQuoteWhole_QPositionTrend_get_tap_346fccac5823e4ff(TapAPIQ
 }
 
 
-void _wrap_TapAPIQuoteWhole_QChangeSpeed_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QChangeSpeed_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE arg2 ;
   
@@ -6369,7 +6353,7 @@ void _wrap_TapAPIQuoteWhole_QChangeSpeed_set_tap_346fccac5823e4ff(TapAPIQuoteWho
 }
 
 
-double _wrap_TapAPIQuoteWhole_QChangeSpeed_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+double _wrap_TapAPIQuoteWhole_QChangeSpeed_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE result;
   double _swig_go_result;
@@ -6382,7 +6366,7 @@ double _wrap_TapAPIQuoteWhole_QChangeSpeed_get_tap_346fccac5823e4ff(TapAPIQuoteW
 }
 
 
-void _wrap_TapAPIQuoteWhole_QChangeRate_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QChangeRate_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE arg2 ;
   
@@ -6394,7 +6378,7 @@ void _wrap_TapAPIQuoteWhole_QChangeRate_set_tap_346fccac5823e4ff(TapAPIQuoteWhol
 }
 
 
-double _wrap_TapAPIQuoteWhole_QChangeRate_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+double _wrap_TapAPIQuoteWhole_QChangeRate_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE result;
   double _swig_go_result;
@@ -6407,7 +6391,7 @@ double _wrap_TapAPIQuoteWhole_QChangeRate_get_tap_346fccac5823e4ff(TapAPIQuoteWh
 }
 
 
-void _wrap_TapAPIQuoteWhole_QChangeValue_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QChangeValue_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE arg2 ;
   
@@ -6419,7 +6403,7 @@ void _wrap_TapAPIQuoteWhole_QChangeValue_set_tap_346fccac5823e4ff(TapAPIQuoteWho
 }
 
 
-double _wrap_TapAPIQuoteWhole_QChangeValue_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+double _wrap_TapAPIQuoteWhole_QChangeValue_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE result;
   double _swig_go_result;
@@ -6432,7 +6416,7 @@ double _wrap_TapAPIQuoteWhole_QChangeValue_get_tap_346fccac5823e4ff(TapAPIQuoteW
 }
 
 
-void _wrap_TapAPIQuoteWhole_QSwing_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QSwing_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, double _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE arg2 ;
   
@@ -6444,7 +6428,7 @@ void _wrap_TapAPIQuoteWhole_QSwing_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_s
 }
 
 
-double _wrap_TapAPIQuoteWhole_QSwing_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+double _wrap_TapAPIQuoteWhole_QSwing_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQPRICE result;
   double _swig_go_result;
@@ -6457,7 +6441,7 @@ double _wrap_TapAPIQuoteWhole_QSwing_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *
 }
 
 
-void _wrap_TapAPIQuoteWhole_QTotalBidQty_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, long long _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QTotalBidQty_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, long long _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQVOLUME arg2 ;
   
@@ -6469,7 +6453,7 @@ void _wrap_TapAPIQuoteWhole_QTotalBidQty_set_tap_346fccac5823e4ff(TapAPIQuoteWho
 }
 
 
-long long _wrap_TapAPIQuoteWhole_QTotalBidQty_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+long long _wrap_TapAPIQuoteWhole_QTotalBidQty_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQVOLUME result;
   long long _swig_go_result;
@@ -6482,7 +6466,7 @@ long long _wrap_TapAPIQuoteWhole_QTotalBidQty_get_tap_346fccac5823e4ff(TapAPIQuo
 }
 
 
-void _wrap_TapAPIQuoteWhole_QTotalAskQty_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, long long _swig_go_1) {
+void _wrap_TapAPIQuoteWhole_QTotalAskQty_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, long long _swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQVOLUME arg2 ;
   
@@ -6494,7 +6478,7 @@ void _wrap_TapAPIQuoteWhole_QTotalAskQty_set_tap_346fccac5823e4ff(TapAPIQuoteWho
 }
 
 
-long long _wrap_TapAPIQuoteWhole_QTotalAskQty_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+long long _wrap_TapAPIQuoteWhole_QTotalAskQty_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TAPIQVOLUME result;
   long long _swig_go_result;
@@ -6507,7 +6491,7 @@ long long _wrap_TapAPIQuoteWhole_QTotalAskQty_get_tap_346fccac5823e4ff(TapAPIQuo
 }
 
 
-void _wrap_TapAPIQuoteWhole_UnderlyContract_set_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0, TapAPIContract *_swig_go_1) {
+void _wrap_TapAPIQuoteWhole_UnderlyContract_set_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0, TapAPIContract *_swig_go_1) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TapAPIContract *arg2 = (TapAPIContract *) 0 ;
   
@@ -6519,7 +6503,7 @@ void _wrap_TapAPIQuoteWhole_UnderlyContract_set_tap_346fccac5823e4ff(TapAPIQuote
 }
 
 
-TapAPIContract *_wrap_TapAPIQuoteWhole_UnderlyContract_get_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+TapAPIContract *_wrap_TapAPIQuoteWhole_UnderlyContract_get_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   TapAPIContract *result = 0 ;
   TapAPIContract *_swig_go_result;
@@ -6532,7 +6516,7 @@ TapAPIContract *_wrap_TapAPIQuoteWhole_UnderlyContract_get_tap_346fccac5823e4ff(
 }
 
 
-TapAPIQuoteWhole *_wrap_new_TapAPIQuoteWhole_tap_346fccac5823e4ff() {
+TapAPIQuoteWhole *_wrap_new_TapAPIQuoteWhole_tap_d0ee4858b481f089() {
   TapAPIQuoteWhole *result = 0 ;
   TapAPIQuoteWhole *_swig_go_result;
   
@@ -6543,7 +6527,7 @@ TapAPIQuoteWhole *_wrap_new_TapAPIQuoteWhole_tap_346fccac5823e4ff() {
 }
 
 
-void _wrap_delete_TapAPIQuoteWhole_tap_346fccac5823e4ff(TapAPIQuoteWhole *_swig_go_0) {
+void _wrap_delete_TapAPIQuoteWhole_tap_d0ee4858b481f089(TapAPIQuoteWhole *_swig_go_0) {
   TapAPIQuoteWhole *arg1 = (TapAPIQuoteWhole *) 0 ;
   
   arg1 = *(TapAPIQuoteWhole **)&_swig_go_0; 
